@@ -29,7 +29,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import urlmanager "github.com/gemini-commerce/go-client-urlmanager"
+import urlmanager "github.com/Gemini-Commerce/go-client-urlmanager"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:

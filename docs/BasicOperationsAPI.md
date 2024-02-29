@@ -1,4 +1,4 @@
-# \BasicOperationsAPI
+# GeminiCommerce\Urlmanager\BasicOperationsAPI
 
 All URIs are relative to *https://urlmanager.api.gogemini.io*
 
@@ -38,7 +38,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -104,7 +104,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -170,7 +170,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -236,7 +236,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -302,7 +302,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -368,7 +368,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -434,7 +434,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -500,7 +500,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -566,7 +566,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -632,7 +632,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -698,7 +698,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -764,7 +764,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -830,7 +830,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {
@@ -896,7 +896,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func main() {

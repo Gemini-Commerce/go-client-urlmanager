@@ -21,10 +21,10 @@ type UrlRewriteRedirectType string
 
 // List of UrlRewriteRedirectType
 const (
-	URLREWRITEREDIRECTTYPE_UNKNOWN UrlRewriteRedirectType = "RedirectType_UNKNOWN"
-	URLREWRITEREDIRECTTYPE_OK UrlRewriteRedirectType = "RedirectType_OK"
-	URLREWRITEREDIRECTTYPE_PERMANENT UrlRewriteRedirectType = "RedirectType_PERMANENT"
-	URLREWRITEREDIRECTTYPE_TEMPORARY UrlRewriteRedirectType = "RedirectType_TEMPORARY"
+	UNKNOWN UrlRewriteRedirectType = "RedirectType_UNKNOWN"
+	OK UrlRewriteRedirectType = "RedirectType_OK"
+	PERMANENT UrlRewriteRedirectType = "RedirectType_PERMANENT"
+	TEMPORARY UrlRewriteRedirectType = "RedirectType_TEMPORARY"
 )
 
 // All allowed values of UrlRewriteRedirectType enum

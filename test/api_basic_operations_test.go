@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/gemini-commerce/go-client-urlmanager"
+	openapiclient "github.com/Gemini-Commerce/go-client-urlmanager"
 )
 
 func Test_urlmanager_BasicOperationsAPIService(t *testing.T) {

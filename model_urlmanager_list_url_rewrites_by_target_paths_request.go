@@ -35,7 +35,7 @@ type UrlmanagerListUrlRewritesByTargetPathsRequest struct {
 // will change when the set of required properties is changed
 func NewUrlmanagerListUrlRewritesByTargetPathsRequest() *UrlmanagerListUrlRewritesByTargetPathsRequest {
 	this := UrlmanagerListUrlRewritesByTargetPathsRequest{}
-	var linkRel UrlRewriteLinkRel = URLREWRITELINKREL_UNKNOWN
+	var linkRel UrlRewriteLinkRel = UNKNOWN
 	this.LinkRel = &linkRel
 	return &this
 }
@@ -45,7 +45,7 @@ func NewUrlmanagerListUrlRewritesByTargetPathsRequest() *UrlmanagerListUrlRewrit
 // but it doesn't guarantee that properties required by API are set
 func NewUrlmanagerListUrlRewritesByTargetPathsRequestWithDefaults() *UrlmanagerListUrlRewritesByTargetPathsRequest {
 	this := UrlmanagerListUrlRewritesByTargetPathsRequest{}
-	var linkRel UrlRewriteLinkRel = URLREWRITELINKREL_UNKNOWN
+	var linkRel UrlRewriteLinkRel = UNKNOWN
 	this.LinkRel = &linkRel
 	return &this
 }
