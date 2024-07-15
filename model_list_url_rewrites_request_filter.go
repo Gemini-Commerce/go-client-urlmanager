@@ -32,7 +32,7 @@ type ListUrlRewritesRequestFilter struct {
 // will change when the set of required properties is changed
 func NewListUrlRewritesRequestFilter() *ListUrlRewritesRequestFilter {
 	this := ListUrlRewritesRequestFilter{}
-	var redirectType UrlRewriteRedirectType = UNKNOWN
+	var redirectType UrlRewriteRedirectType = URLREWRITEREDIRECTTYPE_UNKNOWN
 	this.RedirectType = &redirectType
 	return &this
 }
@@ -42,7 +42,7 @@ func NewListUrlRewritesRequestFilter() *ListUrlRewritesRequestFilter {
 // but it doesn't guarantee that properties required by API are set
 func NewListUrlRewritesRequestFilterWithDefaults() *ListUrlRewritesRequestFilter {
 	this := ListUrlRewritesRequestFilter{}
-	var redirectType UrlRewriteRedirectType = UNKNOWN
+	var redirectType UrlRewriteRedirectType = URLREWRITEREDIRECTTYPE_UNKNOWN
 	this.RedirectType = &redirectType
 	return &this
 }

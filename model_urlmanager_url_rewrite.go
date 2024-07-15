@@ -36,9 +36,9 @@ type UrlmanagerUrlRewrite struct {
 // will change when the set of required properties is changed
 func NewUrlmanagerUrlRewrite() *UrlmanagerUrlRewrite {
 	this := UrlmanagerUrlRewrite{}
-	var redirectType UrlRewriteRedirectType = UNKNOWN
+	var redirectType UrlRewriteRedirectType = URLREWRITEREDIRECTTYPE_UNKNOWN
 	this.RedirectType = &redirectType
-	var linkRel UrlRewriteLinkRel = UNKNOWN
+	var linkRel UrlRewriteLinkRel = URLREWRITELINKREL_UNKNOWN
 	this.LinkRel = &linkRel
 	return &this
 }
@@ -48,9 +48,9 @@ func NewUrlmanagerUrlRewrite() *UrlmanagerUrlRewrite {
 // but it doesn't guarantee that properties required by API are set
 func NewUrlmanagerUrlRewriteWithDefaults() *UrlmanagerUrlRewrite {
 	this := UrlmanagerUrlRewrite{}
-	var redirectType UrlRewriteRedirectType = UNKNOWN
+	var redirectType UrlRewriteRedirectType = URLREWRITEREDIRECTTYPE_UNKNOWN
 	this.RedirectType = &redirectType
-	var linkRel UrlRewriteLinkRel = UNKNOWN
+	var linkRel UrlRewriteLinkRel = URLREWRITELINKREL_UNKNOWN
 	this.LinkRel = &linkRel
 	return &this
 }

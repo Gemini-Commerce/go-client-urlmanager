@@ -20,6 +20,8 @@ info:
   version: 1.0.0
 servers:
 - url: https://urlmanager.api.gogemini.io/
+security:
+- Authorization: []
 tags:
 - description: Url Manager Description
   externalDocs:
@@ -62,8 +64,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Change Url Rewrite Request Path
       tags:
       - Basic Operations
@@ -104,8 +104,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Create Url Rewrite
       tags:
       - Basic Operations
@@ -146,8 +144,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Delete Url Rewrite
       tags:
       - Basic Operations
@@ -188,8 +184,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Get Url Rewrite
       tags:
       - Basic Operations
@@ -230,8 +224,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: List Url Rewrites
       tags:
       - Basic Operations
@@ -251,7 +243,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/urlmanagerListUrlRewritesByTargetPathsRequest '
+                $ref: '#/components/schemas/urlmanagerListUrlRewritesByTargetPathsRequest'
           description: OK
         "401":
           content:
@@ -272,8 +264,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: List Url Rewrites By Target Paths
       tags:
       - Basic Operations
@@ -314,8 +304,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Resolve Url Rewrite
       tags:
       - Basic Operations
@@ -356,8 +344,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Change Url Rewrite Request Path
       tags:
       - Basic Operations
@@ -398,8 +384,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Create Url Rewrite
       tags:
       - Basic Operations
@@ -440,8 +424,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Delete Url Rewrite
       tags:
       - Basic Operations
@@ -482,8 +464,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Get Url Rewrite
       tags:
       - Basic Operations
@@ -524,8 +504,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: List Url Rewrites
       tags:
       - Basic Operations
@@ -545,7 +523,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/urlmanagerListUrlRewritesByTargetPathsRequest '
+                $ref: '#/components/schemas/urlmanagerListUrlRewritesByTargetPathsRequest'
           description: OK
         "401":
           content:
@@ -566,8 +544,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: List Url Rewrites By Target Paths
       tags:
       - Basic Operations
@@ -608,8 +584,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Resolve Url Rewrite
       tags:
       - Basic Operations
@@ -727,6 +701,13 @@ components:
           $ref: '#/components/schemas/GetUrlRewriteRequestCompoundIdentifier'
       type: object
     urlmanagerListUrlRewritesByTargetPathsRequest:
+      example:
+        linkRel: null
+        tenantId: tenantId
+        context: context
+        targetPaths:
+        - targetPaths
+        - targetPaths
       properties:
         tenantId:
           description: Required.
@@ -845,7 +826,13 @@ components:
           $ref: '#/components/schemas/UrlRewriteLinkRel'
       type: object
   securitySchemes:
+    Authorization:
+      in: header
+      name: Authorization
+      type: apiKey
     standardAuthorization:
-      flows: {}
+      flows:
+        implicit:
+          scopes: {}
       type: oauth2
 x-original-swagger-version: "2.0"

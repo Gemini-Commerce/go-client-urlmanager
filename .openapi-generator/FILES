@@ -42,5 +42,4 @@ model_urlmanager_list_url_rewrites_response.go
 model_urlmanager_resolve_url_rewrite_request.go
 model_urlmanager_url_rewrite.go
 response.go
-test/api_basic_operations_test.go
 utils.go
