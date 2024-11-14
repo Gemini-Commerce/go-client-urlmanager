@@ -24,7 +24,10 @@ type UrlmanagerGetUrlRewriteRequest struct {
 	TenantId *string `json:"tenantId,omitempty"`
 	Id *string `json:"id,omitempty"`
 	CompoundIdentifier *GetUrlRewriteRequestCompoundIdentifier `json:"compoundIdentifier,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _UrlmanagerGetUrlRewriteRequest UrlmanagerGetUrlRewriteRequest
 
 // NewUrlmanagerGetUrlRewriteRequest instantiates a new UrlmanagerGetUrlRewriteRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -61,8 +64,8 @@ func (o *UrlmanagerGetUrlRewriteRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *UrlmanagerGetUrlRewriteRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *UrlmanagerGetUrlRewriteRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -93,8 +96,8 @@ func (o *UrlmanagerGetUrlRewriteRequest) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *UrlmanagerGetUrlRewriteRequest) HasId() bool {
+// &#39;Has&#39;Id returns a boolean if a field has been set.
+func (o *UrlmanagerGetUrlRewriteRequest) &#39;Has&#39;Id() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -125,8 +128,8 @@ func (o *UrlmanagerGetUrlRewriteRequest) GetCompoundIdentifierOk() (*GetUrlRewri
 	return o.CompoundIdentifier, true
 }
 
-// HasCompoundIdentifier returns a boolean if a field has been set.
-func (o *UrlmanagerGetUrlRewriteRequest) HasCompoundIdentifier() bool {
+// &#39;Has&#39;CompoundIdentifier returns a boolean if a field has been set.
+func (o *UrlmanagerGetUrlRewriteRequest) &#39;Has&#39;CompoundIdentifier() bool {
 	if o != nil && !IsNil(o.CompoundIdentifier) {
 		return true
 	}
@@ -158,9 +161,55 @@ func (o UrlmanagerGetUrlRewriteRequest) ToMap() (map[string]interface{}, error) 
 	if !IsNil(o.CompoundIdentifier) {
 		toSerialize["compoundIdentifier"] = o.CompoundIdentifier
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *UrlmanagerGetUrlRewriteRequest) UnmarshalJSON(data []byte) (err error) {
+	varUrlmanagerGetUrlRewriteRequest := _UrlmanagerGetUrlRewriteRequest{}
+
+	err = json.Unmarshal(data, &varUrlmanagerGetUrlRewriteRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UrlmanagerGetUrlRewriteRequest(varUrlmanagerGetUrlRewriteRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "id")
+		delete(additionalProperties, "compoundIdentifier")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *UrlmanagerGetUrlRewriteRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *UrlmanagerGetUrlRewriteRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableUrlmanagerGetUrlRewriteRequest struct {
 	value *UrlmanagerGetUrlRewriteRequest
 	isSet bool

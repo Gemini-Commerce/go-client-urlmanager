@@ -1,4 +1,4 @@
-# GeminiCommerce\Urlmanager\BasicOperationsAPI
+# \BasicOperationsAPI
 
 All URIs are relative to *https://urlmanager.api.gogemini.io*
 

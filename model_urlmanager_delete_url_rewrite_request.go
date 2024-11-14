@@ -24,7 +24,10 @@ type UrlmanagerDeleteUrlRewriteRequest struct {
 	TenantId *string `json:"tenantId,omitempty"`
 	// Required.
 	Id *string `json:"id,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _UrlmanagerDeleteUrlRewriteRequest UrlmanagerDeleteUrlRewriteRequest
 
 // NewUrlmanagerDeleteUrlRewriteRequest instantiates a new UrlmanagerDeleteUrlRewriteRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -61,8 +64,8 @@ func (o *UrlmanagerDeleteUrlRewriteRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *UrlmanagerDeleteUrlRewriteRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *UrlmanagerDeleteUrlRewriteRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -93,8 +96,8 @@ func (o *UrlmanagerDeleteUrlRewriteRequest) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// HasId returns a boolean if a field has been set.
-func (o *UrlmanagerDeleteUrlRewriteRequest) HasId() bool {
+// &#39;Has&#39;Id returns a boolean if a field has been set.
+func (o *UrlmanagerDeleteUrlRewriteRequest) &#39;Has&#39;Id() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -123,9 +126,54 @@ func (o UrlmanagerDeleteUrlRewriteRequest) ToMap() (map[string]interface{}, erro
 	if !IsNil(o.Id) {
 		toSerialize["id"] = o.Id
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *UrlmanagerDeleteUrlRewriteRequest) UnmarshalJSON(data []byte) (err error) {
+	varUrlmanagerDeleteUrlRewriteRequest := _UrlmanagerDeleteUrlRewriteRequest{}
+
+	err = json.Unmarshal(data, &varUrlmanagerDeleteUrlRewriteRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UrlmanagerDeleteUrlRewriteRequest(varUrlmanagerDeleteUrlRewriteRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "id")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *UrlmanagerDeleteUrlRewriteRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *UrlmanagerDeleteUrlRewriteRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableUrlmanagerDeleteUrlRewriteRequest struct {
 	value *UrlmanagerDeleteUrlRewriteRequest
 	isSet bool

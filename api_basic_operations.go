@@ -20,220 +20,21 @@ import (
 )
 
 
-type BasicOperationsAPI interface {
-
-	/*
-	UrlManagerChangeUrlRewriteRequestPath Change Url Rewrite Request Path
-
-	Modify the request path of a specific URL rewrite configuration.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest
-	*/
-	UrlManagerChangeUrlRewriteRequestPath(ctx context.Context) BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest
-
-	// UrlManagerChangeUrlRewriteRequestPathExecute executes the request
-	//  @return map[string]interface{}
-	UrlManagerChangeUrlRewriteRequestPathExecute(r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest) (map[string]interface{}, *http.Response, error)
-
-	/*
-	UrlManagerChangeUrlRewriteRequestPath2 Change Url Rewrite Request Path
-
-	Modify the request path of a specific URL rewrite configuration.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request
-	*/
-	UrlManagerChangeUrlRewriteRequestPath2(ctx context.Context) BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request
-
-	// UrlManagerChangeUrlRewriteRequestPath2Execute executes the request
-	//  @return map[string]interface{}
-	UrlManagerChangeUrlRewriteRequestPath2Execute(r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request) (map[string]interface{}, *http.Response, error)
-
-	/*
-	UrlManagerCreateUrlRewrite Create Url Rewrite
-
-	Create a new URL rewrite configuration with customizable rules.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerCreateUrlRewriteRequest
-	*/
-	UrlManagerCreateUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerCreateUrlRewriteRequest
-
-	// UrlManagerCreateUrlRewriteExecute executes the request
-	//  @return UrlmanagerUrlRewrite
-	UrlManagerCreateUrlRewriteExecute(r BasicOperationsAPIUrlManagerCreateUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error)
-
-	/*
-	UrlManagerCreateUrlRewrite2 Create Url Rewrite
-
-	Create a new URL rewrite configuration with customizable rules.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerCreateUrlRewrite2Request
-	*/
-	UrlManagerCreateUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerCreateUrlRewrite2Request
-
-	// UrlManagerCreateUrlRewrite2Execute executes the request
-	//  @return UrlmanagerUrlRewrite
-	UrlManagerCreateUrlRewrite2Execute(r BasicOperationsAPIUrlManagerCreateUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error)
-
-	/*
-	UrlManagerDeleteUrlRewrite Delete Url Rewrite
-
-	Delete an existing URL rewrite configuration.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest
-	*/
-	UrlManagerDeleteUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest
-
-	// UrlManagerDeleteUrlRewriteExecute executes the request
-	//  @return map[string]interface{}
-	UrlManagerDeleteUrlRewriteExecute(r BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest) (map[string]interface{}, *http.Response, error)
-
-	/*
-	UrlManagerDeleteUrlRewrite2 Delete Url Rewrite
-
-	Delete an existing URL rewrite configuration.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request
-	*/
-	UrlManagerDeleteUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request
-
-	// UrlManagerDeleteUrlRewrite2Execute executes the request
-	//  @return map[string]interface{}
-	UrlManagerDeleteUrlRewrite2Execute(r BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request) (map[string]interface{}, *http.Response, error)
-
-	/*
-	UrlManagerGetUrlRewrite Get Url Rewrite
-
-	Retrieve the details of a specific URL rewrite configuration.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerGetUrlRewriteRequest
-	*/
-	UrlManagerGetUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerGetUrlRewriteRequest
-
-	// UrlManagerGetUrlRewriteExecute executes the request
-	//  @return UrlmanagerUrlRewrite
-	UrlManagerGetUrlRewriteExecute(r BasicOperationsAPIUrlManagerGetUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error)
-
-	/*
-	UrlManagerGetUrlRewrite2 Get Url Rewrite
-
-	Retrieve the details of a specific URL rewrite configuration.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerGetUrlRewrite2Request
-	*/
-	UrlManagerGetUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerGetUrlRewrite2Request
-
-	// UrlManagerGetUrlRewrite2Execute executes the request
-	//  @return UrlmanagerUrlRewrite
-	UrlManagerGetUrlRewrite2Execute(r BasicOperationsAPIUrlManagerGetUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error)
-
-	/*
-	UrlManagerListUrlRewrites List Url Rewrites
-
-	Retrieve a list of all URL rewrite configurations in your application.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerListUrlRewritesRequest
-	*/
-	UrlManagerListUrlRewrites(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewritesRequest
-
-	// UrlManagerListUrlRewritesExecute executes the request
-	//  @return UrlmanagerListUrlRewritesResponse
-	UrlManagerListUrlRewritesExecute(r BasicOperationsAPIUrlManagerListUrlRewritesRequest) (*UrlmanagerListUrlRewritesResponse, *http.Response, error)
-
-	/*
-	UrlManagerListUrlRewrites2 List Url Rewrites
-
-	Retrieve a list of all URL rewrite configurations in your application.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerListUrlRewrites2Request
-	*/
-	UrlManagerListUrlRewrites2(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewrites2Request
-
-	// UrlManagerListUrlRewrites2Execute executes the request
-	//  @return UrlmanagerListUrlRewritesResponse
-	UrlManagerListUrlRewrites2Execute(r BasicOperationsAPIUrlManagerListUrlRewrites2Request) (*UrlmanagerListUrlRewritesResponse, *http.Response, error)
-
-	/*
-	UrlManagerListUrlRewritesByTargetPaths List Url Rewrites By Target Paths
-
-	Retrieve URL rewrite configurations based on target paths.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest
-	*/
-	UrlManagerListUrlRewritesByTargetPaths(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest
-
-	// UrlManagerListUrlRewritesByTargetPathsExecute executes the request
-	//  @return UrlmanagerListUrlRewritesByTargetPathsRequest
-	UrlManagerListUrlRewritesByTargetPathsExecute(r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error)
-
-	/*
-	UrlManagerListUrlRewritesByTargetPaths2 List Url Rewrites By Target Paths
-
-	Retrieve URL rewrite configurations based on target paths.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request
-	*/
-	UrlManagerListUrlRewritesByTargetPaths2(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request
-
-	// UrlManagerListUrlRewritesByTargetPaths2Execute executes the request
-	//  @return UrlmanagerListUrlRewritesByTargetPathsRequest
-	UrlManagerListUrlRewritesByTargetPaths2Execute(r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error)
-
-	/*
-	UrlManagerResolveUrlRewrite Resolve Url Rewrite
-
-	Resolve and retrieve the rewritten URL for a given input URL.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerResolveUrlRewriteRequest
-	*/
-	UrlManagerResolveUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerResolveUrlRewriteRequest
-
-	// UrlManagerResolveUrlRewriteExecute executes the request
-	//  @return UrlmanagerUrlRewrite
-	UrlManagerResolveUrlRewriteExecute(r BasicOperationsAPIUrlManagerResolveUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error)
-
-	/*
-	UrlManagerResolveUrlRewrite2 Resolve Url Rewrite
-
-	Resolve and retrieve the rewritten URL for a given input URL.
-
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return BasicOperationsAPIUrlManagerResolveUrlRewrite2Request
-	*/
-	UrlManagerResolveUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerResolveUrlRewrite2Request
-
-	// UrlManagerResolveUrlRewrite2Execute executes the request
-	//  @return UrlmanagerUrlRewrite
-	UrlManagerResolveUrlRewrite2Execute(r BasicOperationsAPIUrlManagerResolveUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error)
-}
-
 // BasicOperationsAPIService BasicOperationsAPI service
 type BasicOperationsAPIService service
 
-type BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest struct {
+type ApiUrlManagerChangeUrlRewriteRequestPathRequest struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerChangeUrlRewriteRequestPathRequest
 }
 
-func (r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest) Body(body UrlmanagerChangeUrlRewriteRequestPathRequest) BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest {
+func (r ApiUrlManagerChangeUrlRewriteRequestPathRequest) Body(body UrlmanagerChangeUrlRewriteRequestPathRequest) ApiUrlManagerChangeUrlRewriteRequestPathRequest {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest) Execute() (map[string]interface{}, *http.Response, error) {
+func (r ApiUrlManagerChangeUrlRewriteRequestPathRequest) Execute() (map[string]interface{}, *http.Response, error) {
 	return r.ApiService.UrlManagerChangeUrlRewriteRequestPathExecute(r)
 }
 
@@ -243,10 +44,10 @@ UrlManagerChangeUrlRewriteRequestPath Change Url Rewrite Request Path
 Modify the request path of a specific URL rewrite configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest
+ @return ApiUrlManagerChangeUrlRewriteRequestPathRequest
 */
-func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath(ctx context.Context) BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest {
-	return BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest{
+func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath(ctx context.Context) ApiUrlManagerChangeUrlRewriteRequestPathRequest {
+	return ApiUrlManagerChangeUrlRewriteRequestPathRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -254,7 +55,7 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath(ctx co
 
 // Execute executes the request
 //  @return map[string]interface{}
-func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPathExecute(r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPathRequest) (map[string]interface{}, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPathExecute(r ApiUrlManagerChangeUrlRewriteRequestPathRequest) (map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -376,18 +177,18 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPathExecute
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request struct {
+type ApiUrlManagerChangeUrlRewriteRequestPath2Request struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerChangeUrlRewriteRequestPathRequest
 }
 
-func (r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request) Body(body UrlmanagerChangeUrlRewriteRequestPathRequest) BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request {
+func (r ApiUrlManagerChangeUrlRewriteRequestPath2Request) Body(body UrlmanagerChangeUrlRewriteRequestPathRequest) ApiUrlManagerChangeUrlRewriteRequestPath2Request {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request) Execute() (map[string]interface{}, *http.Response, error) {
+func (r ApiUrlManagerChangeUrlRewriteRequestPath2Request) Execute() (map[string]interface{}, *http.Response, error) {
 	return r.ApiService.UrlManagerChangeUrlRewriteRequestPath2Execute(r)
 }
 
@@ -397,10 +198,10 @@ UrlManagerChangeUrlRewriteRequestPath2 Change Url Rewrite Request Path
 Modify the request path of a specific URL rewrite configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request
+ @return ApiUrlManagerChangeUrlRewriteRequestPath2Request
 */
-func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2(ctx context.Context) BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request {
-	return BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request{
+func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2(ctx context.Context) ApiUrlManagerChangeUrlRewriteRequestPath2Request {
+	return ApiUrlManagerChangeUrlRewriteRequestPath2Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -408,7 +209,7 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2(ctx c
 
 // Execute executes the request
 //  @return map[string]interface{}
-func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2Execute(r BasicOperationsAPIUrlManagerChangeUrlRewriteRequestPath2Request) (map[string]interface{}, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2Execute(r ApiUrlManagerChangeUrlRewriteRequestPath2Request) (map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -530,18 +331,18 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2Execut
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerCreateUrlRewriteRequest struct {
+type ApiUrlManagerCreateUrlRewriteRequest struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerCreateUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerCreateUrlRewriteRequest) Body(body UrlmanagerCreateUrlRewriteRequest) BasicOperationsAPIUrlManagerCreateUrlRewriteRequest {
+func (r ApiUrlManagerCreateUrlRewriteRequest) Body(body UrlmanagerCreateUrlRewriteRequest) ApiUrlManagerCreateUrlRewriteRequest {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerCreateUrlRewriteRequest) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (r ApiUrlManagerCreateUrlRewriteRequest) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
 	return r.ApiService.UrlManagerCreateUrlRewriteExecute(r)
 }
 
@@ -551,10 +352,10 @@ UrlManagerCreateUrlRewrite Create Url Rewrite
 Create a new URL rewrite configuration with customizable rules.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerCreateUrlRewriteRequest
+ @return ApiUrlManagerCreateUrlRewriteRequest
 */
-func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerCreateUrlRewriteRequest {
-	return BasicOperationsAPIUrlManagerCreateUrlRewriteRequest{
+func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite(ctx context.Context) ApiUrlManagerCreateUrlRewriteRequest {
+	return ApiUrlManagerCreateUrlRewriteRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -562,7 +363,7 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite(ctx context.Conte
 
 // Execute executes the request
 //  @return UrlmanagerUrlRewrite
-func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewriteExecute(r BasicOperationsAPIUrlManagerCreateUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewriteExecute(r ApiUrlManagerCreateUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -684,18 +485,18 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewriteExecute(r BasicOpe
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerCreateUrlRewrite2Request struct {
+type ApiUrlManagerCreateUrlRewrite2Request struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerCreateUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerCreateUrlRewrite2Request) Body(body UrlmanagerCreateUrlRewriteRequest) BasicOperationsAPIUrlManagerCreateUrlRewrite2Request {
+func (r ApiUrlManagerCreateUrlRewrite2Request) Body(body UrlmanagerCreateUrlRewriteRequest) ApiUrlManagerCreateUrlRewrite2Request {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerCreateUrlRewrite2Request) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (r ApiUrlManagerCreateUrlRewrite2Request) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
 	return r.ApiService.UrlManagerCreateUrlRewrite2Execute(r)
 }
 
@@ -705,10 +506,10 @@ UrlManagerCreateUrlRewrite2 Create Url Rewrite
 Create a new URL rewrite configuration with customizable rules.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerCreateUrlRewrite2Request
+ @return ApiUrlManagerCreateUrlRewrite2Request
 */
-func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerCreateUrlRewrite2Request {
-	return BasicOperationsAPIUrlManagerCreateUrlRewrite2Request{
+func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2(ctx context.Context) ApiUrlManagerCreateUrlRewrite2Request {
+	return ApiUrlManagerCreateUrlRewrite2Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -716,7 +517,7 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2(ctx context.Cont
 
 // Execute executes the request
 //  @return UrlmanagerUrlRewrite
-func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2Execute(r BasicOperationsAPIUrlManagerCreateUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2Execute(r ApiUrlManagerCreateUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -838,18 +639,18 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2Execute(r BasicOp
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest struct {
+type ApiUrlManagerDeleteUrlRewriteRequest struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerDeleteUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest) Body(body UrlmanagerDeleteUrlRewriteRequest) BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest {
+func (r ApiUrlManagerDeleteUrlRewriteRequest) Body(body UrlmanagerDeleteUrlRewriteRequest) ApiUrlManagerDeleteUrlRewriteRequest {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest) Execute() (map[string]interface{}, *http.Response, error) {
+func (r ApiUrlManagerDeleteUrlRewriteRequest) Execute() (map[string]interface{}, *http.Response, error) {
 	return r.ApiService.UrlManagerDeleteUrlRewriteExecute(r)
 }
 
@@ -859,10 +660,10 @@ UrlManagerDeleteUrlRewrite Delete Url Rewrite
 Delete an existing URL rewrite configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest
+ @return ApiUrlManagerDeleteUrlRewriteRequest
 */
-func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest {
-	return BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest{
+func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite(ctx context.Context) ApiUrlManagerDeleteUrlRewriteRequest {
+	return ApiUrlManagerDeleteUrlRewriteRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -870,7 +671,7 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite(ctx context.Conte
 
 // Execute executes the request
 //  @return map[string]interface{}
-func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewriteExecute(r BasicOperationsAPIUrlManagerDeleteUrlRewriteRequest) (map[string]interface{}, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewriteExecute(r ApiUrlManagerDeleteUrlRewriteRequest) (map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -992,18 +793,18 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewriteExecute(r BasicOpe
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request struct {
+type ApiUrlManagerDeleteUrlRewrite2Request struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerDeleteUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request) Body(body UrlmanagerDeleteUrlRewriteRequest) BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request {
+func (r ApiUrlManagerDeleteUrlRewrite2Request) Body(body UrlmanagerDeleteUrlRewriteRequest) ApiUrlManagerDeleteUrlRewrite2Request {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request) Execute() (map[string]interface{}, *http.Response, error) {
+func (r ApiUrlManagerDeleteUrlRewrite2Request) Execute() (map[string]interface{}, *http.Response, error) {
 	return r.ApiService.UrlManagerDeleteUrlRewrite2Execute(r)
 }
 
@@ -1013,10 +814,10 @@ UrlManagerDeleteUrlRewrite2 Delete Url Rewrite
 Delete an existing URL rewrite configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request
+ @return ApiUrlManagerDeleteUrlRewrite2Request
 */
-func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request {
-	return BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request{
+func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2(ctx context.Context) ApiUrlManagerDeleteUrlRewrite2Request {
+	return ApiUrlManagerDeleteUrlRewrite2Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1024,7 +825,7 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2(ctx context.Cont
 
 // Execute executes the request
 //  @return map[string]interface{}
-func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2Execute(r BasicOperationsAPIUrlManagerDeleteUrlRewrite2Request) (map[string]interface{}, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2Execute(r ApiUrlManagerDeleteUrlRewrite2Request) (map[string]interface{}, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1146,18 +947,18 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2Execute(r BasicOp
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerGetUrlRewriteRequest struct {
+type ApiUrlManagerGetUrlRewriteRequest struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerGetUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerGetUrlRewriteRequest) Body(body UrlmanagerGetUrlRewriteRequest) BasicOperationsAPIUrlManagerGetUrlRewriteRequest {
+func (r ApiUrlManagerGetUrlRewriteRequest) Body(body UrlmanagerGetUrlRewriteRequest) ApiUrlManagerGetUrlRewriteRequest {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerGetUrlRewriteRequest) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (r ApiUrlManagerGetUrlRewriteRequest) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
 	return r.ApiService.UrlManagerGetUrlRewriteExecute(r)
 }
 
@@ -1167,10 +968,10 @@ UrlManagerGetUrlRewrite Get Url Rewrite
 Retrieve the details of a specific URL rewrite configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerGetUrlRewriteRequest
+ @return ApiUrlManagerGetUrlRewriteRequest
 */
-func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerGetUrlRewriteRequest {
-	return BasicOperationsAPIUrlManagerGetUrlRewriteRequest{
+func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite(ctx context.Context) ApiUrlManagerGetUrlRewriteRequest {
+	return ApiUrlManagerGetUrlRewriteRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1178,7 +979,7 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite(ctx context.Context)
 
 // Execute executes the request
 //  @return UrlmanagerUrlRewrite
-func (a *BasicOperationsAPIService) UrlManagerGetUrlRewriteExecute(r BasicOperationsAPIUrlManagerGetUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerGetUrlRewriteExecute(r ApiUrlManagerGetUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1300,18 +1101,18 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewriteExecute(r BasicOperat
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerGetUrlRewrite2Request struct {
+type ApiUrlManagerGetUrlRewrite2Request struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerGetUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerGetUrlRewrite2Request) Body(body UrlmanagerGetUrlRewriteRequest) BasicOperationsAPIUrlManagerGetUrlRewrite2Request {
+func (r ApiUrlManagerGetUrlRewrite2Request) Body(body UrlmanagerGetUrlRewriteRequest) ApiUrlManagerGetUrlRewrite2Request {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerGetUrlRewrite2Request) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (r ApiUrlManagerGetUrlRewrite2Request) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
 	return r.ApiService.UrlManagerGetUrlRewrite2Execute(r)
 }
 
@@ -1321,10 +1122,10 @@ UrlManagerGetUrlRewrite2 Get Url Rewrite
 Retrieve the details of a specific URL rewrite configuration.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerGetUrlRewrite2Request
+ @return ApiUrlManagerGetUrlRewrite2Request
 */
-func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerGetUrlRewrite2Request {
-	return BasicOperationsAPIUrlManagerGetUrlRewrite2Request{
+func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2(ctx context.Context) ApiUrlManagerGetUrlRewrite2Request {
+	return ApiUrlManagerGetUrlRewrite2Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1332,7 +1133,7 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2(ctx context.Context
 
 // Execute executes the request
 //  @return UrlmanagerUrlRewrite
-func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2Execute(r BasicOperationsAPIUrlManagerGetUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2Execute(r ApiUrlManagerGetUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1454,18 +1255,18 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2Execute(r BasicOpera
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerListUrlRewritesRequest struct {
+type ApiUrlManagerListUrlRewritesRequest struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerListUrlRewritesRequest
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewritesRequest) Body(body UrlmanagerListUrlRewritesRequest) BasicOperationsAPIUrlManagerListUrlRewritesRequest {
+func (r ApiUrlManagerListUrlRewritesRequest) Body(body UrlmanagerListUrlRewritesRequest) ApiUrlManagerListUrlRewritesRequest {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewritesRequest) Execute() (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
+func (r ApiUrlManagerListUrlRewritesRequest) Execute() (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
 	return r.ApiService.UrlManagerListUrlRewritesExecute(r)
 }
 
@@ -1475,10 +1276,10 @@ UrlManagerListUrlRewrites List Url Rewrites
 Retrieve a list of all URL rewrite configurations in your application.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerListUrlRewritesRequest
+ @return ApiUrlManagerListUrlRewritesRequest
 */
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewritesRequest {
-	return BasicOperationsAPIUrlManagerListUrlRewritesRequest{
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites(ctx context.Context) ApiUrlManagerListUrlRewritesRequest {
+	return ApiUrlManagerListUrlRewritesRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1486,7 +1287,7 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites(ctx context.Contex
 
 // Execute executes the request
 //  @return UrlmanagerListUrlRewritesResponse
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesExecute(r BasicOperationsAPIUrlManagerListUrlRewritesRequest) (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesExecute(r ApiUrlManagerListUrlRewritesRequest) (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1608,18 +1409,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesExecute(r BasicOper
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerListUrlRewrites2Request struct {
+type ApiUrlManagerListUrlRewrites2Request struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerListUrlRewritesRequest
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewrites2Request) Body(body UrlmanagerListUrlRewritesRequest) BasicOperationsAPIUrlManagerListUrlRewrites2Request {
+func (r ApiUrlManagerListUrlRewrites2Request) Body(body UrlmanagerListUrlRewritesRequest) ApiUrlManagerListUrlRewrites2Request {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewrites2Request) Execute() (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
+func (r ApiUrlManagerListUrlRewrites2Request) Execute() (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
 	return r.ApiService.UrlManagerListUrlRewrites2Execute(r)
 }
 
@@ -1629,10 +1430,10 @@ UrlManagerListUrlRewrites2 List Url Rewrites
 Retrieve a list of all URL rewrite configurations in your application.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerListUrlRewrites2Request
+ @return ApiUrlManagerListUrlRewrites2Request
 */
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewrites2Request {
-	return BasicOperationsAPIUrlManagerListUrlRewrites2Request{
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2(ctx context.Context) ApiUrlManagerListUrlRewrites2Request {
+	return ApiUrlManagerListUrlRewrites2Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1640,7 +1441,7 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2(ctx context.Conte
 
 // Execute executes the request
 //  @return UrlmanagerListUrlRewritesResponse
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2Execute(r BasicOperationsAPIUrlManagerListUrlRewrites2Request) (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2Execute(r ApiUrlManagerListUrlRewrites2Request) (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1762,18 +1563,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2Execute(r BasicOpe
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest struct {
+type ApiUrlManagerListUrlRewritesByTargetPathsRequest struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerListUrlRewritesByTargetPathsRequest
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest) Body(body UrlmanagerListUrlRewritesByTargetPathsRequest) BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest {
+func (r ApiUrlManagerListUrlRewritesByTargetPathsRequest) Body(body UrlmanagerListUrlRewritesByTargetPathsRequest) ApiUrlManagerListUrlRewritesByTargetPathsRequest {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest) Execute() (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
+func (r ApiUrlManagerListUrlRewritesByTargetPathsRequest) Execute() (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
 	return r.ApiService.UrlManagerListUrlRewritesByTargetPathsExecute(r)
 }
 
@@ -1783,10 +1584,10 @@ UrlManagerListUrlRewritesByTargetPaths List Url Rewrites By Target Paths
 Retrieve URL rewrite configurations based on target paths.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest
+ @return ApiUrlManagerListUrlRewritesByTargetPathsRequest
 */
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest {
-	return BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest{
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths(ctx context.Context) ApiUrlManagerListUrlRewritesByTargetPathsRequest {
+	return ApiUrlManagerListUrlRewritesByTargetPathsRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1794,7 +1595,7 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths(ctx c
 
 // Execute executes the request
 //  @return UrlmanagerListUrlRewritesByTargetPathsRequest
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPathsExecute(r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPathsRequest) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPathsExecute(r ApiUrlManagerListUrlRewritesByTargetPathsRequest) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -1916,18 +1717,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPathsExecut
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request struct {
+type ApiUrlManagerListUrlRewritesByTargetPaths2Request struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerListUrlRewritesByTargetPathsRequest
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request) Body(body UrlmanagerListUrlRewritesByTargetPathsRequest) BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request {
+func (r ApiUrlManagerListUrlRewritesByTargetPaths2Request) Body(body UrlmanagerListUrlRewritesByTargetPathsRequest) ApiUrlManagerListUrlRewritesByTargetPaths2Request {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request) Execute() (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
+func (r ApiUrlManagerListUrlRewritesByTargetPaths2Request) Execute() (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
 	return r.ApiService.UrlManagerListUrlRewritesByTargetPaths2Execute(r)
 }
 
@@ -1937,10 +1738,10 @@ UrlManagerListUrlRewritesByTargetPaths2 List Url Rewrites By Target Paths
 Retrieve URL rewrite configurations based on target paths.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request
+ @return ApiUrlManagerListUrlRewritesByTargetPaths2Request
 */
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2(ctx context.Context) BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request {
-	return BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request{
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2(ctx context.Context) ApiUrlManagerListUrlRewritesByTargetPaths2Request {
+	return ApiUrlManagerListUrlRewritesByTargetPaths2Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1948,7 +1749,7 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2(ctx 
 
 // Execute executes the request
 //  @return UrlmanagerListUrlRewritesByTargetPathsRequest
-func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2Execute(r BasicOperationsAPIUrlManagerListUrlRewritesByTargetPaths2Request) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2Execute(r ApiUrlManagerListUrlRewritesByTargetPaths2Request) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -2070,18 +1871,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2Execu
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerResolveUrlRewriteRequest struct {
+type ApiUrlManagerResolveUrlRewriteRequest struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerResolveUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerResolveUrlRewriteRequest) Body(body UrlmanagerResolveUrlRewriteRequest) BasicOperationsAPIUrlManagerResolveUrlRewriteRequest {
+func (r ApiUrlManagerResolveUrlRewriteRequest) Body(body UrlmanagerResolveUrlRewriteRequest) ApiUrlManagerResolveUrlRewriteRequest {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerResolveUrlRewriteRequest) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (r ApiUrlManagerResolveUrlRewriteRequest) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
 	return r.ApiService.UrlManagerResolveUrlRewriteExecute(r)
 }
 
@@ -2091,10 +1892,10 @@ UrlManagerResolveUrlRewrite Resolve Url Rewrite
 Resolve and retrieve the rewritten URL for a given input URL.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerResolveUrlRewriteRequest
+ @return ApiUrlManagerResolveUrlRewriteRequest
 */
-func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite(ctx context.Context) BasicOperationsAPIUrlManagerResolveUrlRewriteRequest {
-	return BasicOperationsAPIUrlManagerResolveUrlRewriteRequest{
+func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite(ctx context.Context) ApiUrlManagerResolveUrlRewriteRequest {
+	return ApiUrlManagerResolveUrlRewriteRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -2102,7 +1903,7 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite(ctx context.Cont
 
 // Execute executes the request
 //  @return UrlmanagerUrlRewrite
-func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewriteExecute(r BasicOperationsAPIUrlManagerResolveUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewriteExecute(r ApiUrlManagerResolveUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}
@@ -2224,18 +2025,18 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewriteExecute(r BasicOp
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type BasicOperationsAPIUrlManagerResolveUrlRewrite2Request struct {
+type ApiUrlManagerResolveUrlRewrite2Request struct {
 	ctx context.Context
-	ApiService BasicOperationsAPI
+	ApiService *BasicOperationsAPIService
 	body *UrlmanagerResolveUrlRewriteRequest
 }
 
-func (r BasicOperationsAPIUrlManagerResolveUrlRewrite2Request) Body(body UrlmanagerResolveUrlRewriteRequest) BasicOperationsAPIUrlManagerResolveUrlRewrite2Request {
+func (r ApiUrlManagerResolveUrlRewrite2Request) Body(body UrlmanagerResolveUrlRewriteRequest) ApiUrlManagerResolveUrlRewrite2Request {
 	r.body = &body
 	return r
 }
 
-func (r BasicOperationsAPIUrlManagerResolveUrlRewrite2Request) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (r ApiUrlManagerResolveUrlRewrite2Request) Execute() (*UrlmanagerUrlRewrite, *http.Response, error) {
 	return r.ApiService.UrlManagerResolveUrlRewrite2Execute(r)
 }
 
@@ -2245,10 +2046,10 @@ UrlManagerResolveUrlRewrite2 Resolve Url Rewrite
 Resolve and retrieve the rewritten URL for a given input URL.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return BasicOperationsAPIUrlManagerResolveUrlRewrite2Request
+ @return ApiUrlManagerResolveUrlRewrite2Request
 */
-func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2(ctx context.Context) BasicOperationsAPIUrlManagerResolveUrlRewrite2Request {
-	return BasicOperationsAPIUrlManagerResolveUrlRewrite2Request{
+func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2(ctx context.Context) ApiUrlManagerResolveUrlRewrite2Request {
+	return ApiUrlManagerResolveUrlRewrite2Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -2256,7 +2057,7 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2(ctx context.Con
 
 // Execute executes the request
 //  @return UrlmanagerUrlRewrite
-func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2Execute(r BasicOperationsAPIUrlManagerResolveUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
+func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2Execute(r ApiUrlManagerResolveUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodPost
 		localVarPostBody     interface{}

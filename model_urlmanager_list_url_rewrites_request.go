@@ -27,7 +27,10 @@ type UrlmanagerListUrlRewritesRequest struct {
 	PageSize *int64 `json:"pageSize,omitempty"`
 	// A page token, received from a previous `ListUrlRewrites` call. Provide this to retrieve the subsequent page.   When paginating, all other parameters provided to `ListUrlRewrites` must match the call that provided the page token.
 	PageToken *string `json:"pageToken,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _UrlmanagerListUrlRewritesRequest UrlmanagerListUrlRewritesRequest
 
 // NewUrlmanagerListUrlRewritesRequest instantiates a new UrlmanagerListUrlRewritesRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -64,8 +67,8 @@ func (o *UrlmanagerListUrlRewritesRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -96,8 +99,8 @@ func (o *UrlmanagerListUrlRewritesRequest) GetFilterOk() (*ListUrlRewritesReques
 	return o.Filter, true
 }
 
-// HasFilter returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesRequest) HasFilter() bool {
+// &#39;Has&#39;Filter returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesRequest) &#39;Has&#39;Filter() bool {
 	if o != nil && !IsNil(o.Filter) {
 		return true
 	}
@@ -128,8 +131,8 @@ func (o *UrlmanagerListUrlRewritesRequest) GetPageSizeOk() (*int64, bool) {
 	return o.PageSize, true
 }
 
-// HasPageSize returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesRequest) HasPageSize() bool {
+// &#39;Has&#39;PageSize returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesRequest) &#39;Has&#39;PageSize() bool {
 	if o != nil && !IsNil(o.PageSize) {
 		return true
 	}
@@ -160,8 +163,8 @@ func (o *UrlmanagerListUrlRewritesRequest) GetPageTokenOk() (*string, bool) {
 	return o.PageToken, true
 }
 
-// HasPageToken returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesRequest) HasPageToken() bool {
+// &#39;Has&#39;PageToken returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesRequest) &#39;Has&#39;PageToken() bool {
 	if o != nil && !IsNil(o.PageToken) {
 		return true
 	}
@@ -196,9 +199,56 @@ func (o UrlmanagerListUrlRewritesRequest) ToMap() (map[string]interface{}, error
 	if !IsNil(o.PageToken) {
 		toSerialize["pageToken"] = o.PageToken
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *UrlmanagerListUrlRewritesRequest) UnmarshalJSON(data []byte) (err error) {
+	varUrlmanagerListUrlRewritesRequest := _UrlmanagerListUrlRewritesRequest{}
+
+	err = json.Unmarshal(data, &varUrlmanagerListUrlRewritesRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UrlmanagerListUrlRewritesRequest(varUrlmanagerListUrlRewritesRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "filter")
+		delete(additionalProperties, "pageSize")
+		delete(additionalProperties, "pageToken")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *UrlmanagerListUrlRewritesRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *UrlmanagerListUrlRewritesRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableUrlmanagerListUrlRewritesRequest struct {
 	value *UrlmanagerListUrlRewritesRequest
 	isSet bool

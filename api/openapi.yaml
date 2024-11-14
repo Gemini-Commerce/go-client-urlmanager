@@ -627,11 +627,19 @@ components:
     protobufAny:
       additionalProperties:
         type: object
+      example:
+        '@type': '@type'
       properties:
         '@type':
           type: string
       type: object
     rpcStatus:
+      example:
+        code: 0
+        details:
+        - '@type': '@type'
+        - '@type': '@type'
+        message: message
       properties:
         code:
           format: int32
@@ -702,7 +710,7 @@ components:
       type: object
     urlmanagerListUrlRewritesByTargetPathsRequest:
       example:
-        linkRel: null
+        linkRel: LinkRel_UNKNOWN
         tenantId: tenantId
         context: context
         targetPaths:
@@ -758,19 +766,19 @@ components:
     urlmanagerListUrlRewritesResponse:
       example:
         urlRewrites:
-        - linkRel: null
+        - linkRel: LinkRel_UNKNOWN
           tenantId: tenantId
           context: context
           targetPath: targetPath
           id: id
-          redirectType: null
+          redirectType: RedirectType_UNKNOWN
           requestPath: requestPath
-        - linkRel: null
+        - linkRel: LinkRel_UNKNOWN
           tenantId: tenantId
           context: context
           targetPath: targetPath
           id: id
-          redirectType: null
+          redirectType: RedirectType_UNKNOWN
           requestPath: requestPath
         nextPageToken: nextPageToken
       properties:
@@ -798,12 +806,12 @@ components:
       type: object
     urlmanagerUrlRewrite:
       example:
-        linkRel: null
+        linkRel: LinkRel_UNKNOWN
         tenantId: tenantId
         context: context
         targetPath: targetPath
         id: id
-        redirectType: null
+        redirectType: RedirectType_UNKNOWN
         requestPath: requestPath
       properties:
         tenantId:

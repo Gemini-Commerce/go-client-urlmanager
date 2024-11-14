@@ -21,7 +21,10 @@ var _ MappedNullable = &UrlmanagerListUrlRewritesByTargetPathsResponse{}
 // UrlmanagerListUrlRewritesByTargetPathsResponse struct for UrlmanagerListUrlRewritesByTargetPathsResponse
 type UrlmanagerListUrlRewritesByTargetPathsResponse struct {
 	UrlRewrites []UrlmanagerUrlRewrite `json:"urlRewrites,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _UrlmanagerListUrlRewritesByTargetPathsResponse UrlmanagerListUrlRewritesByTargetPathsResponse
 
 // NewUrlmanagerListUrlRewritesByTargetPathsResponse instantiates a new UrlmanagerListUrlRewritesByTargetPathsResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -58,8 +61,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) GetUrlRewritesOk() ([]U
 	return o.UrlRewrites, true
 }
 
-// HasUrlRewrites returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) HasUrlRewrites() bool {
+// &#39;Has&#39;UrlRewrites returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) &#39;Has&#39;UrlRewrites() bool {
 	if o != nil && !IsNil(o.UrlRewrites) {
 		return true
 	}
@@ -85,9 +88,53 @@ func (o UrlmanagerListUrlRewritesByTargetPathsResponse) ToMap() (map[string]inte
 	if !IsNil(o.UrlRewrites) {
 		toSerialize["urlRewrites"] = o.UrlRewrites
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) UnmarshalJSON(data []byte) (err error) {
+	varUrlmanagerListUrlRewritesByTargetPathsResponse := _UrlmanagerListUrlRewritesByTargetPathsResponse{}
+
+	err = json.Unmarshal(data, &varUrlmanagerListUrlRewritesByTargetPathsResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UrlmanagerListUrlRewritesByTargetPathsResponse(varUrlmanagerListUrlRewritesByTargetPathsResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "urlRewrites")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableUrlmanagerListUrlRewritesByTargetPathsResponse struct {
 	value *UrlmanagerListUrlRewritesByTargetPathsResponse
 	isSet bool

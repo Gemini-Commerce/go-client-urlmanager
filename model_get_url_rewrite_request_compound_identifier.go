@@ -22,7 +22,10 @@ var _ MappedNullable = &GetUrlRewriteRequestCompoundIdentifier{}
 type GetUrlRewriteRequestCompoundIdentifier struct {
 	Context *string `json:"context,omitempty"`
 	RequestPath *string `json:"requestPath,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _GetUrlRewriteRequestCompoundIdentifier GetUrlRewriteRequestCompoundIdentifier
 
 // NewGetUrlRewriteRequestCompoundIdentifier instantiates a new GetUrlRewriteRequestCompoundIdentifier object
 // This constructor will assign default values to properties that have it defined,
@@ -59,8 +62,8 @@ func (o *GetUrlRewriteRequestCompoundIdentifier) GetContextOk() (*string, bool) 
 	return o.Context, true
 }
 
-// HasContext returns a boolean if a field has been set.
-func (o *GetUrlRewriteRequestCompoundIdentifier) HasContext() bool {
+// &#39;Has&#39;Context returns a boolean if a field has been set.
+func (o *GetUrlRewriteRequestCompoundIdentifier) &#39;Has&#39;Context() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -91,8 +94,8 @@ func (o *GetUrlRewriteRequestCompoundIdentifier) GetRequestPathOk() (*string, bo
 	return o.RequestPath, true
 }
 
-// HasRequestPath returns a boolean if a field has been set.
-func (o *GetUrlRewriteRequestCompoundIdentifier) HasRequestPath() bool {
+// &#39;Has&#39;RequestPath returns a boolean if a field has been set.
+func (o *GetUrlRewriteRequestCompoundIdentifier) &#39;Has&#39;RequestPath() bool {
 	if o != nil && !IsNil(o.RequestPath) {
 		return true
 	}
@@ -121,9 +124,54 @@ func (o GetUrlRewriteRequestCompoundIdentifier) ToMap() (map[string]interface{},
 	if !IsNil(o.RequestPath) {
 		toSerialize["requestPath"] = o.RequestPath
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *GetUrlRewriteRequestCompoundIdentifier) UnmarshalJSON(data []byte) (err error) {
+	varGetUrlRewriteRequestCompoundIdentifier := _GetUrlRewriteRequestCompoundIdentifier{}
+
+	err = json.Unmarshal(data, &varGetUrlRewriteRequestCompoundIdentifier)
+
+	if err != nil {
+		return err
+	}
+
+	*o = GetUrlRewriteRequestCompoundIdentifier(varGetUrlRewriteRequestCompoundIdentifier)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "context")
+		delete(additionalProperties, "requestPath")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *GetUrlRewriteRequestCompoundIdentifier) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *GetUrlRewriteRequestCompoundIdentifier) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableGetUrlRewriteRequestCompoundIdentifier struct {
 	value *GetUrlRewriteRequestCompoundIdentifier
 	isSet bool

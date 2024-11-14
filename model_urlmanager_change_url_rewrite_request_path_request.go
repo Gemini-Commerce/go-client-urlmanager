@@ -28,7 +28,10 @@ type UrlmanagerChangeUrlRewriteRequestPathRequest struct {
 	RequestPath *string `json:"requestPath,omitempty"`
 	// Required.
 	RequestPathNew *string `json:"requestPathNew,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _UrlmanagerChangeUrlRewriteRequestPathRequest UrlmanagerChangeUrlRewriteRequestPathRequest
 
 // NewUrlmanagerChangeUrlRewriteRequestPathRequest instantiates a new UrlmanagerChangeUrlRewriteRequestPathRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -65,8 +68,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetTenantIdOk() (*string,
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -97,8 +100,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetContextOk() (*string, 
 	return o.Context, true
 }
 
-// HasContext returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasContext() bool {
+// &#39;Has&#39;Context returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;Context() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -129,8 +132,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetRequestPathOk() (*stri
 	return o.RequestPath, true
 }
 
-// HasRequestPath returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasRequestPath() bool {
+// &#39;Has&#39;RequestPath returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;RequestPath() bool {
 	if o != nil && !IsNil(o.RequestPath) {
 		return true
 	}
@@ -161,8 +164,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetRequestPathNewOk() (*s
 	return o.RequestPathNew, true
 }
 
-// HasRequestPathNew returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasRequestPathNew() bool {
+// &#39;Has&#39;RequestPathNew returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;RequestPathNew() bool {
 	if o != nil && !IsNil(o.RequestPathNew) {
 		return true
 	}
@@ -197,9 +200,56 @@ func (o UrlmanagerChangeUrlRewriteRequestPathRequest) ToMap() (map[string]interf
 	if !IsNil(o.RequestPathNew) {
 		toSerialize["requestPathNew"] = o.RequestPathNew
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) UnmarshalJSON(data []byte) (err error) {
+	varUrlmanagerChangeUrlRewriteRequestPathRequest := _UrlmanagerChangeUrlRewriteRequestPathRequest{}
+
+	err = json.Unmarshal(data, &varUrlmanagerChangeUrlRewriteRequestPathRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UrlmanagerChangeUrlRewriteRequestPathRequest(varUrlmanagerChangeUrlRewriteRequestPathRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "context")
+		delete(additionalProperties, "requestPath")
+		delete(additionalProperties, "requestPathNew")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableUrlmanagerChangeUrlRewriteRequestPathRequest struct {
 	value *UrlmanagerChangeUrlRewriteRequestPathRequest
 	isSet bool

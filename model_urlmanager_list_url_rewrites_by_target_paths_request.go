@@ -27,7 +27,10 @@ type UrlmanagerListUrlRewritesByTargetPathsRequest struct {
 	// Optional.
 	Context *string `json:"context,omitempty"`
 	LinkRel *UrlRewriteLinkRel `json:"linkRel,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _UrlmanagerListUrlRewritesByTargetPathsRequest UrlmanagerListUrlRewritesByTargetPathsRequest
 
 // NewUrlmanagerListUrlRewritesByTargetPathsRequest instantiates a new UrlmanagerListUrlRewritesByTargetPathsRequest object
 // This constructor will assign default values to properties that have it defined,
@@ -68,8 +71,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetTenantIdOk() (*string
 	return o.TenantId, true
 }
 
-// HasTenantId returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasTenantId() bool {
+// &#39;Has&#39;TenantId returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;TenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -100,8 +103,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetTargetPathsOk() ([]st
 	return o.TargetPaths, true
 }
 
-// HasTargetPaths returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasTargetPaths() bool {
+// &#39;Has&#39;TargetPaths returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;TargetPaths() bool {
 	if o != nil && !IsNil(o.TargetPaths) {
 		return true
 	}
@@ -132,8 +135,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetContextOk() (*string,
 	return o.Context, true
 }
 
-// HasContext returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasContext() bool {
+// &#39;Has&#39;Context returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;Context() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -164,8 +167,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetLinkRelOk() (*UrlRewr
 	return o.LinkRel, true
 }
 
-// HasLinkRel returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasLinkRel() bool {
+// &#39;Has&#39;LinkRel returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;LinkRel() bool {
 	if o != nil && !IsNil(o.LinkRel) {
 		return true
 	}
@@ -200,9 +203,56 @@ func (o UrlmanagerListUrlRewritesByTargetPathsRequest) ToMap() (map[string]inter
 	if !IsNil(o.LinkRel) {
 		toSerialize["linkRel"] = o.LinkRel
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) UnmarshalJSON(data []byte) (err error) {
+	varUrlmanagerListUrlRewritesByTargetPathsRequest := _UrlmanagerListUrlRewritesByTargetPathsRequest{}
+
+	err = json.Unmarshal(data, &varUrlmanagerListUrlRewritesByTargetPathsRequest)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UrlmanagerListUrlRewritesByTargetPathsRequest(varUrlmanagerListUrlRewritesByTargetPathsRequest)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "tenantId")
+		delete(additionalProperties, "targetPaths")
+		delete(additionalProperties, "context")
+		delete(additionalProperties, "linkRel")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableUrlmanagerListUrlRewritesByTargetPathsRequest struct {
 	value *UrlmanagerListUrlRewritesByTargetPathsRequest
 	isSet bool

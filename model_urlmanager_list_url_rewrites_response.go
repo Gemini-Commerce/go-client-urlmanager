@@ -23,7 +23,10 @@ type UrlmanagerListUrlRewritesResponse struct {
 	UrlRewrites []UrlmanagerUrlRewrite `json:"urlRewrites,omitempty"`
 	// A token that can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.
 	NextPageToken *string `json:"nextPageToken,omitempty"`
+	AdditionalProperties map[string]interface{}
 }
+
+type _UrlmanagerListUrlRewritesResponse UrlmanagerListUrlRewritesResponse
 
 // NewUrlmanagerListUrlRewritesResponse instantiates a new UrlmanagerListUrlRewritesResponse object
 // This constructor will assign default values to properties that have it defined,
@@ -60,8 +63,8 @@ func (o *UrlmanagerListUrlRewritesResponse) GetUrlRewritesOk() ([]UrlmanagerUrlR
 	return o.UrlRewrites, true
 }
 
-// HasUrlRewrites returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesResponse) HasUrlRewrites() bool {
+// &#39;Has&#39;UrlRewrites returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesResponse) &#39;Has&#39;UrlRewrites() bool {
 	if o != nil && !IsNil(o.UrlRewrites) {
 		return true
 	}
@@ -92,8 +95,8 @@ func (o *UrlmanagerListUrlRewritesResponse) GetNextPageTokenOk() (*string, bool)
 	return o.NextPageToken, true
 }
 
-// HasNextPageToken returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesResponse) HasNextPageToken() bool {
+// &#39;Has&#39;NextPageToken returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesResponse) &#39;Has&#39;NextPageToken() bool {
 	if o != nil && !IsNil(o.NextPageToken) {
 		return true
 	}
@@ -122,9 +125,54 @@ func (o UrlmanagerListUrlRewritesResponse) ToMap() (map[string]interface{}, erro
 	if !IsNil(o.NextPageToken) {
 		toSerialize["nextPageToken"] = o.NextPageToken
 	}
+
+	for key, value := range o.AdditionalProperties {
+		toSerialize[key] = value
+	}
+
 	return toSerialize, nil
 }
 
+func (o *UrlmanagerListUrlRewritesResponse) UnmarshalJSON(data []byte) (err error) {
+	varUrlmanagerListUrlRewritesResponse := _UrlmanagerListUrlRewritesResponse{}
+
+	err = json.Unmarshal(data, &varUrlmanagerListUrlRewritesResponse)
+
+	if err != nil {
+		return err
+	}
+
+	*o = UrlmanagerListUrlRewritesResponse(varUrlmanagerListUrlRewritesResponse)
+
+	additionalProperties := make(map[string]interface{})
+
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
+		delete(additionalProperties, "urlRewrites")
+		delete(additionalProperties, "nextPageToken")
+		o.AdditionalProperties = additionalProperties
+	}
+
+	return err
+}
+
+// GetValue returns the value of well-known types
+func (o *UrlmanagerListUrlRewritesResponse) GetValue() interface{} {
+	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+		return nil
+	}
+	return o.AdditionalProperties["value"]
+}
+// SetValue populate the value of well-known types
+func (o *UrlmanagerListUrlRewritesResponse) SetValue(value interface{}) {
+	if o == nil || IsNil(o.Type) || IsNil(value) {
+		return
+	}
+    if IsNil(o.AdditionalProperties) {
+        o.AdditionalProperties = map[string]interface{}{}
+    }
+	o.AdditionalProperties["value"] = value
+	return
+}
 type NullableUrlmanagerListUrlRewritesResponse struct {
 	value *UrlmanagerListUrlRewritesResponse
 	isSet bool
