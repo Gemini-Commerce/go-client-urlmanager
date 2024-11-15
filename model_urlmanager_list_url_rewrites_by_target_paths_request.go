@@ -71,8 +71,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetTenantIdOk() (*string
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -103,8 +103,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetTargetPathsOk() ([]st
 	return o.TargetPaths, true
 }
 
-// &#39;Has&#39;TargetPaths returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;TargetPaths() bool {
+// HasTargetPaths returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasTargetPaths() bool {
 	if o != nil && !IsNil(o.TargetPaths) {
 		return true
 	}
@@ -135,8 +135,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetContextOk() (*string,
 	return o.Context, true
 }
 
-// &#39;Has&#39;Context returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;Context() bool {
+// HasContext returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasContext() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -167,8 +167,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) GetLinkRelOk() (*UrlRewr
 	return o.LinkRel, true
 }
 
-// &#39;Has&#39;LinkRel returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) &#39;Has&#39;LinkRel() bool {
+// HasLinkRel returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsRequest) HasLinkRel() bool {
 	if o != nil && !IsNil(o.LinkRel) {
 		return true
 	}

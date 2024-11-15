@@ -66,8 +66,8 @@ func (o *UrlmanagerResolveUrlRewriteRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *UrlmanagerResolveUrlRewriteRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *UrlmanagerResolveUrlRewriteRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -98,8 +98,8 @@ func (o *UrlmanagerResolveUrlRewriteRequest) GetContextOk() (*string, bool) {
 	return o.Context, true
 }
 
-// &#39;Has&#39;Context returns a boolean if a field has been set.
-func (o *UrlmanagerResolveUrlRewriteRequest) &#39;Has&#39;Context() bool {
+// HasContext returns a boolean if a field has been set.
+func (o *UrlmanagerResolveUrlRewriteRequest) HasContext() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -130,8 +130,8 @@ func (o *UrlmanagerResolveUrlRewriteRequest) GetRequestPathOk() (*string, bool) 
 	return o.RequestPath, true
 }
 
-// &#39;Has&#39;RequestPath returns a boolean if a field has been set.
-func (o *UrlmanagerResolveUrlRewriteRequest) &#39;Has&#39;RequestPath() bool {
+// HasRequestPath returns a boolean if a field has been set.
+func (o *UrlmanagerResolveUrlRewriteRequest) HasRequestPath() bool {
 	if o != nil && !IsNil(o.RequestPath) {
 		return true
 	}

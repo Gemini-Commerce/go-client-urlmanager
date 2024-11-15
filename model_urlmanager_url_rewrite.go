@@ -76,8 +76,8 @@ func (o *UrlmanagerUrlRewrite) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *UrlmanagerUrlRewrite) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *UrlmanagerUrlRewrite) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -108,8 +108,8 @@ func (o *UrlmanagerUrlRewrite) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// &#39;Has&#39;Id returns a boolean if a field has been set.
-func (o *UrlmanagerUrlRewrite) &#39;Has&#39;Id() bool {
+// HasId returns a boolean if a field has been set.
+func (o *UrlmanagerUrlRewrite) HasId() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -140,8 +140,8 @@ func (o *UrlmanagerUrlRewrite) GetContextOk() (*string, bool) {
 	return o.Context, true
 }
 
-// &#39;Has&#39;Context returns a boolean if a field has been set.
-func (o *UrlmanagerUrlRewrite) &#39;Has&#39;Context() bool {
+// HasContext returns a boolean if a field has been set.
+func (o *UrlmanagerUrlRewrite) HasContext() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -172,8 +172,8 @@ func (o *UrlmanagerUrlRewrite) GetRequestPathOk() (*string, bool) {
 	return o.RequestPath, true
 }
 
-// &#39;Has&#39;RequestPath returns a boolean if a field has been set.
-func (o *UrlmanagerUrlRewrite) &#39;Has&#39;RequestPath() bool {
+// HasRequestPath returns a boolean if a field has been set.
+func (o *UrlmanagerUrlRewrite) HasRequestPath() bool {
 	if o != nil && !IsNil(o.RequestPath) {
 		return true
 	}
@@ -204,8 +204,8 @@ func (o *UrlmanagerUrlRewrite) GetTargetPathOk() (*string, bool) {
 	return o.TargetPath, true
 }
 
-// &#39;Has&#39;TargetPath returns a boolean if a field has been set.
-func (o *UrlmanagerUrlRewrite) &#39;Has&#39;TargetPath() bool {
+// HasTargetPath returns a boolean if a field has been set.
+func (o *UrlmanagerUrlRewrite) HasTargetPath() bool {
 	if o != nil && !IsNil(o.TargetPath) {
 		return true
 	}
@@ -236,8 +236,8 @@ func (o *UrlmanagerUrlRewrite) GetRedirectTypeOk() (*UrlRewriteRedirectType, boo
 	return o.RedirectType, true
 }
 
-// &#39;Has&#39;RedirectType returns a boolean if a field has been set.
-func (o *UrlmanagerUrlRewrite) &#39;Has&#39;RedirectType() bool {
+// HasRedirectType returns a boolean if a field has been set.
+func (o *UrlmanagerUrlRewrite) HasRedirectType() bool {
 	if o != nil && !IsNil(o.RedirectType) {
 		return true
 	}
@@ -268,8 +268,8 @@ func (o *UrlmanagerUrlRewrite) GetLinkRelOk() (*UrlRewriteLinkRel, bool) {
 	return o.LinkRel, true
 }
 
-// &#39;Has&#39;LinkRel returns a boolean if a field has been set.
-func (o *UrlmanagerUrlRewrite) &#39;Has&#39;LinkRel() bool {
+// HasLinkRel returns a boolean if a field has been set.
+func (o *UrlmanagerUrlRewrite) HasLinkRel() bool {
 	if o != nil && !IsNil(o.LinkRel) {
 		return true
 	}

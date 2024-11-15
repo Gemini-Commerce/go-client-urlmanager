@@ -63,8 +63,8 @@ func (o *UrlmanagerListUrlRewritesResponse) GetUrlRewritesOk() ([]UrlmanagerUrlR
 	return o.UrlRewrites, true
 }
 
-// &#39;Has&#39;UrlRewrites returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesResponse) &#39;Has&#39;UrlRewrites() bool {
+// HasUrlRewrites returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesResponse) HasUrlRewrites() bool {
 	if o != nil && !IsNil(o.UrlRewrites) {
 		return true
 	}
@@ -95,8 +95,8 @@ func (o *UrlmanagerListUrlRewritesResponse) GetNextPageTokenOk() (*string, bool)
 	return o.NextPageToken, true
 }
 
-// &#39;Has&#39;NextPageToken returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesResponse) &#39;Has&#39;NextPageToken() bool {
+// HasNextPageToken returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesResponse) HasNextPageToken() bool {
 	if o != nil && !IsNil(o.NextPageToken) {
 		return true
 	}

@@ -68,8 +68,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetTenantIdOk() (*string,
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -100,8 +100,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetContextOk() (*string, 
 	return o.Context, true
 }
 
-// &#39;Has&#39;Context returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;Context() bool {
+// HasContext returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasContext() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -132,8 +132,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetRequestPathOk() (*stri
 	return o.RequestPath, true
 }
 
-// &#39;Has&#39;RequestPath returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;RequestPath() bool {
+// HasRequestPath returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasRequestPath() bool {
 	if o != nil && !IsNil(o.RequestPath) {
 		return true
 	}
@@ -164,8 +164,8 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetRequestPathNewOk() (*s
 	return o.RequestPathNew, true
 }
 
-// &#39;Has&#39;RequestPathNew returns a boolean if a field has been set.
-func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) &#39;Has&#39;RequestPathNew() bool {
+// HasRequestPathNew returns a boolean if a field has been set.
+func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) HasRequestPathNew() bool {
 	if o != nil && !IsNil(o.RequestPathNew) {
 		return true
 	}

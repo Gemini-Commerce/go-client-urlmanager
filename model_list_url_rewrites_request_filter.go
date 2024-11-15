@@ -68,8 +68,8 @@ func (o *ListUrlRewritesRequestFilter) GetContextOk() (*string, bool) {
 	return o.Context, true
 }
 
-// &#39;Has&#39;Context returns a boolean if a field has been set.
-func (o *ListUrlRewritesRequestFilter) &#39;Has&#39;Context() bool {
+// HasContext returns a boolean if a field has been set.
+func (o *ListUrlRewritesRequestFilter) HasContext() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -100,8 +100,8 @@ func (o *ListUrlRewritesRequestFilter) GetRequestPathOk() (*string, bool) {
 	return o.RequestPath, true
 }
 
-// &#39;Has&#39;RequestPath returns a boolean if a field has been set.
-func (o *ListUrlRewritesRequestFilter) &#39;Has&#39;RequestPath() bool {
+// HasRequestPath returns a boolean if a field has been set.
+func (o *ListUrlRewritesRequestFilter) HasRequestPath() bool {
 	if o != nil && !IsNil(o.RequestPath) {
 		return true
 	}
@@ -132,8 +132,8 @@ func (o *ListUrlRewritesRequestFilter) GetTargetPathOk() (*string, bool) {
 	return o.TargetPath, true
 }
 
-// &#39;Has&#39;TargetPath returns a boolean if a field has been set.
-func (o *ListUrlRewritesRequestFilter) &#39;Has&#39;TargetPath() bool {
+// HasTargetPath returns a boolean if a field has been set.
+func (o *ListUrlRewritesRequestFilter) HasTargetPath() bool {
 	if o != nil && !IsNil(o.TargetPath) {
 		return true
 	}
@@ -164,8 +164,8 @@ func (o *ListUrlRewritesRequestFilter) GetRedirectTypeOk() (*UrlRewriteRedirectT
 	return o.RedirectType, true
 }
 
-// &#39;Has&#39;RedirectType returns a boolean if a field has been set.
-func (o *ListUrlRewritesRequestFilter) &#39;Has&#39;RedirectType() bool {
+// HasRedirectType returns a boolean if a field has been set.
+func (o *ListUrlRewritesRequestFilter) HasRedirectType() bool {
 	if o != nil && !IsNil(o.RedirectType) {
 		return true
 	}

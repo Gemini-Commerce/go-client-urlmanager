@@ -64,8 +64,8 @@ func (o *UrlmanagerGetUrlRewriteRequest) GetTenantIdOk() (*string, bool) {
 	return o.TenantId, true
 }
 
-// &#39;Has&#39;TenantId returns a boolean if a field has been set.
-func (o *UrlmanagerGetUrlRewriteRequest) &#39;Has&#39;TenantId() bool {
+// HasTenantId returns a boolean if a field has been set.
+func (o *UrlmanagerGetUrlRewriteRequest) HasTenantId() bool {
 	if o != nil && !IsNil(o.TenantId) {
 		return true
 	}
@@ -96,8 +96,8 @@ func (o *UrlmanagerGetUrlRewriteRequest) GetIdOk() (*string, bool) {
 	return o.Id, true
 }
 
-// &#39;Has&#39;Id returns a boolean if a field has been set.
-func (o *UrlmanagerGetUrlRewriteRequest) &#39;Has&#39;Id() bool {
+// HasId returns a boolean if a field has been set.
+func (o *UrlmanagerGetUrlRewriteRequest) HasId() bool {
 	if o != nil && !IsNil(o.Id) {
 		return true
 	}
@@ -128,8 +128,8 @@ func (o *UrlmanagerGetUrlRewriteRequest) GetCompoundIdentifierOk() (*GetUrlRewri
 	return o.CompoundIdentifier, true
 }
 
-// &#39;Has&#39;CompoundIdentifier returns a boolean if a field has been set.
-func (o *UrlmanagerGetUrlRewriteRequest) &#39;Has&#39;CompoundIdentifier() bool {
+// HasCompoundIdentifier returns a boolean if a field has been set.
+func (o *UrlmanagerGetUrlRewriteRequest) HasCompoundIdentifier() bool {
 	if o != nil && !IsNil(o.CompoundIdentifier) {
 		return true
 	}

@@ -61,8 +61,8 @@ func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) GetUrlRewritesOk() ([]U
 	return o.UrlRewrites, true
 }
 
-// &#39;Has&#39;UrlRewrites returns a boolean if a field has been set.
-func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) &#39;Has&#39;UrlRewrites() bool {
+// HasUrlRewrites returns a boolean if a field has been set.
+func (o *UrlmanagerListUrlRewritesByTargetPathsResponse) HasUrlRewrites() bool {
 	if o != nil && !IsNil(o.UrlRewrites) {
 		return true
 	}

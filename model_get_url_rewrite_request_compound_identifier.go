@@ -62,8 +62,8 @@ func (o *GetUrlRewriteRequestCompoundIdentifier) GetContextOk() (*string, bool) 
 	return o.Context, true
 }
 
-// &#39;Has&#39;Context returns a boolean if a field has been set.
-func (o *GetUrlRewriteRequestCompoundIdentifier) &#39;Has&#39;Context() bool {
+// HasContext returns a boolean if a field has been set.
+func (o *GetUrlRewriteRequestCompoundIdentifier) HasContext() bool {
 	if o != nil && !IsNil(o.Context) {
 		return true
 	}
@@ -94,8 +94,8 @@ func (o *GetUrlRewriteRequestCompoundIdentifier) GetRequestPathOk() (*string, bo
 	return o.RequestPath, true
 }
 
-// &#39;Has&#39;RequestPath returns a boolean if a field has been set.
-func (o *GetUrlRewriteRequestCompoundIdentifier) &#39;Has&#39;RequestPath() bool {
+// HasRequestPath returns a boolean if a field has been set.
+func (o *GetUrlRewriteRequestCompoundIdentifier) HasRequestPath() bool {
 	if o != nil && !IsNil(o.RequestPath) {
 		return true
 	}
