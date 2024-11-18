@@ -21,8 +21,8 @@ type UrlRewriteRedirectType string
 
 // List of UrlRewriteRedirectType
 const (
-	URLREWRITEREDIRECTTYPE_UNKNOWN UrlRewriteRedirectType = "RedirectType_UNKNOWN"
-	URLREWRITEREDIRECTTYPE_OK UrlRewriteRedirectType = "RedirectType_OK"
+	URLREWRITEREDIRECTTYPE_UNKNOWN   UrlRewriteRedirectType = "RedirectType_UNKNOWN"
+	URLREWRITEREDIRECTTYPE_OK        UrlRewriteRedirectType = "RedirectType_OK"
 	URLREWRITEREDIRECTTYPE_PERMANENT UrlRewriteRedirectType = "RedirectType_PERMANENT"
 	URLREWRITEREDIRECTTYPE_TEMPORARY UrlRewriteRedirectType = "RedirectType_TEMPORARY"
 )
@@ -113,4 +113,3 @@ func (v *NullableUrlRewriteRedirectType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

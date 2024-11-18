@@ -19,14 +19,212 @@ import (
 	"net/url"
 )
 
+type BasicOperationsAPI interface {
+
+	/*
+		UrlManagerChangeUrlRewriteRequestPath Change Url Rewrite Request Path
+
+		Modify the request path of a specific URL rewrite configuration.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerChangeUrlRewriteRequestPathRequest
+	*/
+	UrlManagerChangeUrlRewriteRequestPath(ctx context.Context) ApiUrlManagerChangeUrlRewriteRequestPathRequest
+
+	// UrlManagerChangeUrlRewriteRequestPathExecute executes the request
+	//  @return map[string]interface{}
+	UrlManagerChangeUrlRewriteRequestPathExecute(r ApiUrlManagerChangeUrlRewriteRequestPathRequest) (map[string]interface{}, *http.Response, error)
+
+	/*
+		UrlManagerChangeUrlRewriteRequestPath2 Change Url Rewrite Request Path
+
+		Modify the request path of a specific URL rewrite configuration.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerChangeUrlRewriteRequestPath2Request
+	*/
+	UrlManagerChangeUrlRewriteRequestPath2(ctx context.Context) ApiUrlManagerChangeUrlRewriteRequestPath2Request
+
+	// UrlManagerChangeUrlRewriteRequestPath2Execute executes the request
+	//  @return map[string]interface{}
+	UrlManagerChangeUrlRewriteRequestPath2Execute(r ApiUrlManagerChangeUrlRewriteRequestPath2Request) (map[string]interface{}, *http.Response, error)
+
+	/*
+		UrlManagerCreateUrlRewrite Create Url Rewrite
+
+		Create a new URL rewrite configuration with customizable rules.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerCreateUrlRewriteRequest
+	*/
+	UrlManagerCreateUrlRewrite(ctx context.Context) ApiUrlManagerCreateUrlRewriteRequest
+
+	// UrlManagerCreateUrlRewriteExecute executes the request
+	//  @return UrlmanagerUrlRewrite
+	UrlManagerCreateUrlRewriteExecute(r ApiUrlManagerCreateUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error)
+
+	/*
+		UrlManagerCreateUrlRewrite2 Create Url Rewrite
+
+		Create a new URL rewrite configuration with customizable rules.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerCreateUrlRewrite2Request
+	*/
+	UrlManagerCreateUrlRewrite2(ctx context.Context) ApiUrlManagerCreateUrlRewrite2Request
+
+	// UrlManagerCreateUrlRewrite2Execute executes the request
+	//  @return UrlmanagerUrlRewrite
+	UrlManagerCreateUrlRewrite2Execute(r ApiUrlManagerCreateUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error)
+
+	/*
+		UrlManagerDeleteUrlRewrite Delete Url Rewrite
+
+		Delete an existing URL rewrite configuration.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerDeleteUrlRewriteRequest
+	*/
+	UrlManagerDeleteUrlRewrite(ctx context.Context) ApiUrlManagerDeleteUrlRewriteRequest
+
+	// UrlManagerDeleteUrlRewriteExecute executes the request
+	//  @return map[string]interface{}
+	UrlManagerDeleteUrlRewriteExecute(r ApiUrlManagerDeleteUrlRewriteRequest) (map[string]interface{}, *http.Response, error)
+
+	/*
+		UrlManagerDeleteUrlRewrite2 Delete Url Rewrite
+
+		Delete an existing URL rewrite configuration.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerDeleteUrlRewrite2Request
+	*/
+	UrlManagerDeleteUrlRewrite2(ctx context.Context) ApiUrlManagerDeleteUrlRewrite2Request
+
+	// UrlManagerDeleteUrlRewrite2Execute executes the request
+	//  @return map[string]interface{}
+	UrlManagerDeleteUrlRewrite2Execute(r ApiUrlManagerDeleteUrlRewrite2Request) (map[string]interface{}, *http.Response, error)
+
+	/*
+		UrlManagerGetUrlRewrite Get Url Rewrite
+
+		Retrieve the details of a specific URL rewrite configuration.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerGetUrlRewriteRequest
+	*/
+	UrlManagerGetUrlRewrite(ctx context.Context) ApiUrlManagerGetUrlRewriteRequest
+
+	// UrlManagerGetUrlRewriteExecute executes the request
+	//  @return UrlmanagerUrlRewrite
+	UrlManagerGetUrlRewriteExecute(r ApiUrlManagerGetUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error)
+
+	/*
+		UrlManagerGetUrlRewrite2 Get Url Rewrite
+
+		Retrieve the details of a specific URL rewrite configuration.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerGetUrlRewrite2Request
+	*/
+	UrlManagerGetUrlRewrite2(ctx context.Context) ApiUrlManagerGetUrlRewrite2Request
+
+	// UrlManagerGetUrlRewrite2Execute executes the request
+	//  @return UrlmanagerUrlRewrite
+	UrlManagerGetUrlRewrite2Execute(r ApiUrlManagerGetUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error)
+
+	/*
+		UrlManagerListUrlRewrites List Url Rewrites
+
+		Retrieve a list of all URL rewrite configurations in your application.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerListUrlRewritesRequest
+	*/
+	UrlManagerListUrlRewrites(ctx context.Context) ApiUrlManagerListUrlRewritesRequest
+
+	// UrlManagerListUrlRewritesExecute executes the request
+	//  @return UrlmanagerListUrlRewritesResponse
+	UrlManagerListUrlRewritesExecute(r ApiUrlManagerListUrlRewritesRequest) (*UrlmanagerListUrlRewritesResponse, *http.Response, error)
+
+	/*
+		UrlManagerListUrlRewrites2 List Url Rewrites
+
+		Retrieve a list of all URL rewrite configurations in your application.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerListUrlRewrites2Request
+	*/
+	UrlManagerListUrlRewrites2(ctx context.Context) ApiUrlManagerListUrlRewrites2Request
+
+	// UrlManagerListUrlRewrites2Execute executes the request
+	//  @return UrlmanagerListUrlRewritesResponse
+	UrlManagerListUrlRewrites2Execute(r ApiUrlManagerListUrlRewrites2Request) (*UrlmanagerListUrlRewritesResponse, *http.Response, error)
+
+	/*
+		UrlManagerListUrlRewritesByTargetPaths List Url Rewrites By Target Paths
+
+		Retrieve URL rewrite configurations based on target paths.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerListUrlRewritesByTargetPathsRequest
+	*/
+	UrlManagerListUrlRewritesByTargetPaths(ctx context.Context) ApiUrlManagerListUrlRewritesByTargetPathsRequest
+
+	// UrlManagerListUrlRewritesByTargetPathsExecute executes the request
+	//  @return UrlmanagerListUrlRewritesByTargetPathsRequest
+	UrlManagerListUrlRewritesByTargetPathsExecute(r ApiUrlManagerListUrlRewritesByTargetPathsRequest) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error)
+
+	/*
+		UrlManagerListUrlRewritesByTargetPaths2 List Url Rewrites By Target Paths
+
+		Retrieve URL rewrite configurations based on target paths.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerListUrlRewritesByTargetPaths2Request
+	*/
+	UrlManagerListUrlRewritesByTargetPaths2(ctx context.Context) ApiUrlManagerListUrlRewritesByTargetPaths2Request
+
+	// UrlManagerListUrlRewritesByTargetPaths2Execute executes the request
+	//  @return UrlmanagerListUrlRewritesByTargetPathsRequest
+	UrlManagerListUrlRewritesByTargetPaths2Execute(r ApiUrlManagerListUrlRewritesByTargetPaths2Request) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error)
+
+	/*
+		UrlManagerResolveUrlRewrite Resolve Url Rewrite
+
+		Resolve and retrieve the rewritten URL for a given input URL.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerResolveUrlRewriteRequest
+	*/
+	UrlManagerResolveUrlRewrite(ctx context.Context) ApiUrlManagerResolveUrlRewriteRequest
+
+	// UrlManagerResolveUrlRewriteExecute executes the request
+	//  @return UrlmanagerUrlRewrite
+	UrlManagerResolveUrlRewriteExecute(r ApiUrlManagerResolveUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error)
+
+	/*
+		UrlManagerResolveUrlRewrite2 Resolve Url Rewrite
+
+		Resolve and retrieve the rewritten URL for a given input URL.
+
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiUrlManagerResolveUrlRewrite2Request
+	*/
+	UrlManagerResolveUrlRewrite2(ctx context.Context) ApiUrlManagerResolveUrlRewrite2Request
+
+	// UrlManagerResolveUrlRewrite2Execute executes the request
+	//  @return UrlmanagerUrlRewrite
+	UrlManagerResolveUrlRewrite2Execute(r ApiUrlManagerResolveUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error)
+}
 
 // BasicOperationsAPIService BasicOperationsAPI service
 type BasicOperationsAPIService service
 
 type ApiUrlManagerChangeUrlRewriteRequestPathRequest struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerChangeUrlRewriteRequestPathRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerChangeUrlRewriteRequestPathRequest
 }
 
 func (r ApiUrlManagerChangeUrlRewriteRequestPathRequest) Body(body UrlmanagerChangeUrlRewriteRequestPathRequest) ApiUrlManagerChangeUrlRewriteRequestPathRequest {
@@ -43,24 +241,25 @@ UrlManagerChangeUrlRewriteRequestPath Change Url Rewrite Request Path
 
 Modify the request path of a specific URL rewrite configuration.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerChangeUrlRewriteRequestPathRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerChangeUrlRewriteRequestPathRequest
 */
 func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath(ctx context.Context) ApiUrlManagerChangeUrlRewriteRequestPathRequest {
 	return ApiUrlManagerChangeUrlRewriteRequestPathRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPathExecute(r ApiUrlManagerChangeUrlRewriteRequestPathRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerChangeUrlRewriteRequestPath")
@@ -139,8 +338,8 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPathExecute
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -150,18 +349,18 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPathExecute
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -178,9 +377,9 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPathExecute
 }
 
 type ApiUrlManagerChangeUrlRewriteRequestPath2Request struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerChangeUrlRewriteRequestPathRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerChangeUrlRewriteRequestPathRequest
 }
 
 func (r ApiUrlManagerChangeUrlRewriteRequestPath2Request) Body(body UrlmanagerChangeUrlRewriteRequestPathRequest) ApiUrlManagerChangeUrlRewriteRequestPath2Request {
@@ -197,24 +396,25 @@ UrlManagerChangeUrlRewriteRequestPath2 Change Url Rewrite Request Path
 
 Modify the request path of a specific URL rewrite configuration.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerChangeUrlRewriteRequestPath2Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerChangeUrlRewriteRequestPath2Request
 */
 func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2(ctx context.Context) ApiUrlManagerChangeUrlRewriteRequestPath2Request {
 	return ApiUrlManagerChangeUrlRewriteRequestPath2Request{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2Execute(r ApiUrlManagerChangeUrlRewriteRequestPath2Request) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerChangeUrlRewriteRequestPath2")
@@ -293,8 +493,8 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2Execut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -304,18 +504,18 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2Execut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -332,9 +532,9 @@ func (a *BasicOperationsAPIService) UrlManagerChangeUrlRewriteRequestPath2Execut
 }
 
 type ApiUrlManagerCreateUrlRewriteRequest struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerCreateUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerCreateUrlRewriteRequest
 }
 
 func (r ApiUrlManagerCreateUrlRewriteRequest) Body(body UrlmanagerCreateUrlRewriteRequest) ApiUrlManagerCreateUrlRewriteRequest {
@@ -351,24 +551,25 @@ UrlManagerCreateUrlRewrite Create Url Rewrite
 
 Create a new URL rewrite configuration with customizable rules.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerCreateUrlRewriteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerCreateUrlRewriteRequest
 */
 func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite(ctx context.Context) ApiUrlManagerCreateUrlRewriteRequest {
 	return ApiUrlManagerCreateUrlRewriteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerUrlRewrite
+//
+//	@return UrlmanagerUrlRewrite
 func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewriteExecute(r ApiUrlManagerCreateUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerUrlRewrite
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerUrlRewrite
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerCreateUrlRewrite")
@@ -447,8 +648,8 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewriteExecute(r ApiUrlMa
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -458,18 +659,18 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewriteExecute(r ApiUrlMa
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -486,9 +687,9 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewriteExecute(r ApiUrlMa
 }
 
 type ApiUrlManagerCreateUrlRewrite2Request struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerCreateUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerCreateUrlRewriteRequest
 }
 
 func (r ApiUrlManagerCreateUrlRewrite2Request) Body(body UrlmanagerCreateUrlRewriteRequest) ApiUrlManagerCreateUrlRewrite2Request {
@@ -505,24 +706,25 @@ UrlManagerCreateUrlRewrite2 Create Url Rewrite
 
 Create a new URL rewrite configuration with customizable rules.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerCreateUrlRewrite2Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerCreateUrlRewrite2Request
 */
 func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2(ctx context.Context) ApiUrlManagerCreateUrlRewrite2Request {
 	return ApiUrlManagerCreateUrlRewrite2Request{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerUrlRewrite
+//
+//	@return UrlmanagerUrlRewrite
 func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2Execute(r ApiUrlManagerCreateUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerUrlRewrite
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerUrlRewrite
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerCreateUrlRewrite2")
@@ -601,8 +803,8 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2Execute(r ApiUrlM
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -612,18 +814,18 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2Execute(r ApiUrlM
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -640,9 +842,9 @@ func (a *BasicOperationsAPIService) UrlManagerCreateUrlRewrite2Execute(r ApiUrlM
 }
 
 type ApiUrlManagerDeleteUrlRewriteRequest struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerDeleteUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerDeleteUrlRewriteRequest
 }
 
 func (r ApiUrlManagerDeleteUrlRewriteRequest) Body(body UrlmanagerDeleteUrlRewriteRequest) ApiUrlManagerDeleteUrlRewriteRequest {
@@ -659,24 +861,25 @@ UrlManagerDeleteUrlRewrite Delete Url Rewrite
 
 Delete an existing URL rewrite configuration.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerDeleteUrlRewriteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerDeleteUrlRewriteRequest
 */
 func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite(ctx context.Context) ApiUrlManagerDeleteUrlRewriteRequest {
 	return ApiUrlManagerDeleteUrlRewriteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewriteExecute(r ApiUrlManagerDeleteUrlRewriteRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerDeleteUrlRewrite")
@@ -755,8 +958,8 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewriteExecute(r ApiUrlMa
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -766,18 +969,18 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewriteExecute(r ApiUrlMa
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -794,9 +997,9 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewriteExecute(r ApiUrlMa
 }
 
 type ApiUrlManagerDeleteUrlRewrite2Request struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerDeleteUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerDeleteUrlRewriteRequest
 }
 
 func (r ApiUrlManagerDeleteUrlRewrite2Request) Body(body UrlmanagerDeleteUrlRewriteRequest) ApiUrlManagerDeleteUrlRewrite2Request {
@@ -813,24 +1016,25 @@ UrlManagerDeleteUrlRewrite2 Delete Url Rewrite
 
 Delete an existing URL rewrite configuration.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerDeleteUrlRewrite2Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerDeleteUrlRewrite2Request
 */
 func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2(ctx context.Context) ApiUrlManagerDeleteUrlRewrite2Request {
 	return ApiUrlManagerDeleteUrlRewrite2Request{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2Execute(r ApiUrlManagerDeleteUrlRewrite2Request) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerDeleteUrlRewrite2")
@@ -909,8 +1113,8 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2Execute(r ApiUrlM
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -920,18 +1124,18 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2Execute(r ApiUrlM
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -948,9 +1152,9 @@ func (a *BasicOperationsAPIService) UrlManagerDeleteUrlRewrite2Execute(r ApiUrlM
 }
 
 type ApiUrlManagerGetUrlRewriteRequest struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerGetUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerGetUrlRewriteRequest
 }
 
 func (r ApiUrlManagerGetUrlRewriteRequest) Body(body UrlmanagerGetUrlRewriteRequest) ApiUrlManagerGetUrlRewriteRequest {
@@ -967,24 +1171,25 @@ UrlManagerGetUrlRewrite Get Url Rewrite
 
 Retrieve the details of a specific URL rewrite configuration.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerGetUrlRewriteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerGetUrlRewriteRequest
 */
 func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite(ctx context.Context) ApiUrlManagerGetUrlRewriteRequest {
 	return ApiUrlManagerGetUrlRewriteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerUrlRewrite
+//
+//	@return UrlmanagerUrlRewrite
 func (a *BasicOperationsAPIService) UrlManagerGetUrlRewriteExecute(r ApiUrlManagerGetUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerUrlRewrite
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerUrlRewrite
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerGetUrlRewrite")
@@ -1063,8 +1268,8 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewriteExecute(r ApiUrlManag
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1074,18 +1279,18 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewriteExecute(r ApiUrlManag
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1102,9 +1307,9 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewriteExecute(r ApiUrlManag
 }
 
 type ApiUrlManagerGetUrlRewrite2Request struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerGetUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerGetUrlRewriteRequest
 }
 
 func (r ApiUrlManagerGetUrlRewrite2Request) Body(body UrlmanagerGetUrlRewriteRequest) ApiUrlManagerGetUrlRewrite2Request {
@@ -1121,24 +1326,25 @@ UrlManagerGetUrlRewrite2 Get Url Rewrite
 
 Retrieve the details of a specific URL rewrite configuration.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerGetUrlRewrite2Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerGetUrlRewrite2Request
 */
 func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2(ctx context.Context) ApiUrlManagerGetUrlRewrite2Request {
 	return ApiUrlManagerGetUrlRewrite2Request{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerUrlRewrite
+//
+//	@return UrlmanagerUrlRewrite
 func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2Execute(r ApiUrlManagerGetUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerUrlRewrite
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerUrlRewrite
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerGetUrlRewrite2")
@@ -1217,8 +1423,8 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2Execute(r ApiUrlMana
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1228,18 +1434,18 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2Execute(r ApiUrlMana
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1256,9 +1462,9 @@ func (a *BasicOperationsAPIService) UrlManagerGetUrlRewrite2Execute(r ApiUrlMana
 }
 
 type ApiUrlManagerListUrlRewritesRequest struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerListUrlRewritesRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerListUrlRewritesRequest
 }
 
 func (r ApiUrlManagerListUrlRewritesRequest) Body(body UrlmanagerListUrlRewritesRequest) ApiUrlManagerListUrlRewritesRequest {
@@ -1275,24 +1481,25 @@ UrlManagerListUrlRewrites List Url Rewrites
 
 Retrieve a list of all URL rewrite configurations in your application.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerListUrlRewritesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerListUrlRewritesRequest
 */
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites(ctx context.Context) ApiUrlManagerListUrlRewritesRequest {
 	return ApiUrlManagerListUrlRewritesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerListUrlRewritesResponse
+//
+//	@return UrlmanagerListUrlRewritesResponse
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesExecute(r ApiUrlManagerListUrlRewritesRequest) (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerListUrlRewritesResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerListUrlRewritesResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerListUrlRewrites")
@@ -1371,8 +1578,8 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesExecute(r ApiUrlMan
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1382,18 +1589,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesExecute(r ApiUrlMan
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1410,9 +1617,9 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesExecute(r ApiUrlMan
 }
 
 type ApiUrlManagerListUrlRewrites2Request struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerListUrlRewritesRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerListUrlRewritesRequest
 }
 
 func (r ApiUrlManagerListUrlRewrites2Request) Body(body UrlmanagerListUrlRewritesRequest) ApiUrlManagerListUrlRewrites2Request {
@@ -1429,24 +1636,25 @@ UrlManagerListUrlRewrites2 List Url Rewrites
 
 Retrieve a list of all URL rewrite configurations in your application.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerListUrlRewrites2Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerListUrlRewrites2Request
 */
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2(ctx context.Context) ApiUrlManagerListUrlRewrites2Request {
 	return ApiUrlManagerListUrlRewrites2Request{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerListUrlRewritesResponse
+//
+//	@return UrlmanagerListUrlRewritesResponse
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2Execute(r ApiUrlManagerListUrlRewrites2Request) (*UrlmanagerListUrlRewritesResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerListUrlRewritesResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerListUrlRewritesResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerListUrlRewrites2")
@@ -1525,8 +1733,8 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2Execute(r ApiUrlMa
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1536,18 +1744,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2Execute(r ApiUrlMa
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1564,9 +1772,9 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewrites2Execute(r ApiUrlMa
 }
 
 type ApiUrlManagerListUrlRewritesByTargetPathsRequest struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerListUrlRewritesByTargetPathsRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerListUrlRewritesByTargetPathsRequest
 }
 
 func (r ApiUrlManagerListUrlRewritesByTargetPathsRequest) Body(body UrlmanagerListUrlRewritesByTargetPathsRequest) ApiUrlManagerListUrlRewritesByTargetPathsRequest {
@@ -1583,24 +1791,25 @@ UrlManagerListUrlRewritesByTargetPaths List Url Rewrites By Target Paths
 
 Retrieve URL rewrite configurations based on target paths.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerListUrlRewritesByTargetPathsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerListUrlRewritesByTargetPathsRequest
 */
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths(ctx context.Context) ApiUrlManagerListUrlRewritesByTargetPathsRequest {
 	return ApiUrlManagerListUrlRewritesByTargetPathsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerListUrlRewritesByTargetPathsRequest
+//
+//	@return UrlmanagerListUrlRewritesByTargetPathsRequest
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPathsExecute(r ApiUrlManagerListUrlRewritesByTargetPathsRequest) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerListUrlRewritesByTargetPathsRequest
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerListUrlRewritesByTargetPathsRequest
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerListUrlRewritesByTargetPaths")
@@ -1679,8 +1888,8 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPathsExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1690,18 +1899,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPathsExecut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1718,9 +1927,9 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPathsExecut
 }
 
 type ApiUrlManagerListUrlRewritesByTargetPaths2Request struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerListUrlRewritesByTargetPathsRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerListUrlRewritesByTargetPathsRequest
 }
 
 func (r ApiUrlManagerListUrlRewritesByTargetPaths2Request) Body(body UrlmanagerListUrlRewritesByTargetPathsRequest) ApiUrlManagerListUrlRewritesByTargetPaths2Request {
@@ -1737,24 +1946,25 @@ UrlManagerListUrlRewritesByTargetPaths2 List Url Rewrites By Target Paths
 
 Retrieve URL rewrite configurations based on target paths.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerListUrlRewritesByTargetPaths2Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerListUrlRewritesByTargetPaths2Request
 */
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2(ctx context.Context) ApiUrlManagerListUrlRewritesByTargetPaths2Request {
 	return ApiUrlManagerListUrlRewritesByTargetPaths2Request{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerListUrlRewritesByTargetPathsRequest
+//
+//	@return UrlmanagerListUrlRewritesByTargetPathsRequest
 func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2Execute(r ApiUrlManagerListUrlRewritesByTargetPaths2Request) (*UrlmanagerListUrlRewritesByTargetPathsRequest, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerListUrlRewritesByTargetPathsRequest
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerListUrlRewritesByTargetPathsRequest
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerListUrlRewritesByTargetPaths2")
@@ -1833,8 +2043,8 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2Execu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1844,18 +2054,18 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2Execu
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -1872,9 +2082,9 @@ func (a *BasicOperationsAPIService) UrlManagerListUrlRewritesByTargetPaths2Execu
 }
 
 type ApiUrlManagerResolveUrlRewriteRequest struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerResolveUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerResolveUrlRewriteRequest
 }
 
 func (r ApiUrlManagerResolveUrlRewriteRequest) Body(body UrlmanagerResolveUrlRewriteRequest) ApiUrlManagerResolveUrlRewriteRequest {
@@ -1891,24 +2101,25 @@ UrlManagerResolveUrlRewrite Resolve Url Rewrite
 
 Resolve and retrieve the rewritten URL for a given input URL.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerResolveUrlRewriteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerResolveUrlRewriteRequest
 */
 func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite(ctx context.Context) ApiUrlManagerResolveUrlRewriteRequest {
 	return ApiUrlManagerResolveUrlRewriteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerUrlRewrite
+//
+//	@return UrlmanagerUrlRewrite
 func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewriteExecute(r ApiUrlManagerResolveUrlRewriteRequest) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerUrlRewrite
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerUrlRewrite
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerResolveUrlRewrite")
@@ -1987,8 +2198,8 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewriteExecute(r ApiUrlM
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -1998,18 +2209,18 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewriteExecute(r ApiUrlM
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
@@ -2026,9 +2237,9 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewriteExecute(r ApiUrlM
 }
 
 type ApiUrlManagerResolveUrlRewrite2Request struct {
-	ctx context.Context
-	ApiService *BasicOperationsAPIService
-	body *UrlmanagerResolveUrlRewriteRequest
+	ctx        context.Context
+	ApiService BasicOperationsAPI
+	body       *UrlmanagerResolveUrlRewriteRequest
 }
 
 func (r ApiUrlManagerResolveUrlRewrite2Request) Body(body UrlmanagerResolveUrlRewriteRequest) ApiUrlManagerResolveUrlRewrite2Request {
@@ -2045,24 +2256,25 @@ UrlManagerResolveUrlRewrite2 Resolve Url Rewrite
 
 Resolve and retrieve the rewritten URL for a given input URL.
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiUrlManagerResolveUrlRewrite2Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiUrlManagerResolveUrlRewrite2Request
 */
 func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2(ctx context.Context) ApiUrlManagerResolveUrlRewrite2Request {
 	return ApiUrlManagerResolveUrlRewrite2Request{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UrlmanagerUrlRewrite
+//
+//	@return UrlmanagerUrlRewrite
 func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2Execute(r ApiUrlManagerResolveUrlRewrite2Request) (*UrlmanagerUrlRewrite, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UrlmanagerUrlRewrite
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UrlmanagerUrlRewrite
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BasicOperationsAPIService.UrlManagerResolveUrlRewrite2")
@@ -2141,8 +2353,8 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2Execute(r ApiUrl
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode == 500 {
@@ -2152,18 +2364,18 @@ func (a *BasicOperationsAPIService) UrlManagerResolveUrlRewrite2Execute(r ApiUrl
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+			newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-			if err != nil {
-				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
-			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+		var v RpcStatus
+		err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+		if err != nil {
+			newErr.error = err.Error()
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
+		newErr.model = v
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 

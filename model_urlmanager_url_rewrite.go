@@ -21,13 +21,13 @@ var _ MappedNullable = &UrlmanagerUrlRewrite{}
 // UrlmanagerUrlRewrite struct for UrlmanagerUrlRewrite
 type UrlmanagerUrlRewrite struct {
 	TenantId *string `json:"tenantId,omitempty"`
-	Id *string `json:"id,omitempty"`
+	Id       *string `json:"id,omitempty"`
 	// Context field is part of the key. it's up to whoever is using the url manager to define it. e.g. locale or market or a concatenation of the two if needed.
-	Context *string `json:"context,omitempty"`
-	RequestPath *string `json:"requestPath,omitempty"`
-	TargetPath *string `json:"targetPath,omitempty"`
-	RedirectType *UrlRewriteRedirectType `json:"redirectType,omitempty"`
-	LinkRel *UrlRewriteLinkRel `json:"linkRel,omitempty"`
+	Context              *string                 `json:"context,omitempty"`
+	RequestPath          *string                 `json:"requestPath,omitempty"`
+	TargetPath           *string                 `json:"targetPath,omitempty"`
+	RedirectType         *UrlRewriteRedirectType `json:"redirectType,omitempty"`
+	LinkRel              *UrlRewriteLinkRel      `json:"linkRel,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -283,7 +283,7 @@ func (o *UrlmanagerUrlRewrite) SetLinkRel(v UrlRewriteLinkRel) {
 }
 
 func (o UrlmanagerUrlRewrite) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -350,22 +350,24 @@ func (o *UrlmanagerUrlRewrite) UnmarshalJSON(data []byte) (err error) {
 
 // GetValue returns the value of well-known types
 func (o *UrlmanagerUrlRewrite) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+	if o == nil || IsNil(o.AdditionalProperties) {
 		return nil
 	}
 	return o.AdditionalProperties["value"]
 }
-// SetValue populate the value of well-known types
+
+// SetValue populates the value of well-known types
 func (o *UrlmanagerUrlRewrite) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
+	if o == nil || IsNil(value) {
 		return
 	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
-    }
+	if IsNil(o.AdditionalProperties) {
+		o.AdditionalProperties = map[string]interface{}{}
+	}
 	o.AdditionalProperties["value"] = value
 	return
 }
+
 type NullableUrlmanagerUrlRewrite struct {
 	value *UrlmanagerUrlRewrite
 	isSet bool
@@ -401,5 +403,3 @@ func (v *NullableUrlmanagerUrlRewrite) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

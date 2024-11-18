@@ -27,9 +27,9 @@ type UrlmanagerCreateUrlRewriteRequest struct {
 	// Required.
 	RequestPath *string `json:"requestPath,omitempty"`
 	// Required.
-	TargetPath *string `json:"targetPath,omitempty"`
-	RedirectType *UrlRewriteRedirectType `json:"redirectType,omitempty"`
-	LinkRel *UrlRewriteLinkRel `json:"linkRel,omitempty"`
+	TargetPath           *string                 `json:"targetPath,omitempty"`
+	RedirectType         *UrlRewriteRedirectType `json:"redirectType,omitempty"`
+	LinkRel              *UrlRewriteLinkRel      `json:"linkRel,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -253,7 +253,7 @@ func (o *UrlmanagerCreateUrlRewriteRequest) SetLinkRel(v UrlRewriteLinkRel) {
 }
 
 func (o UrlmanagerCreateUrlRewriteRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -316,22 +316,24 @@ func (o *UrlmanagerCreateUrlRewriteRequest) UnmarshalJSON(data []byte) (err erro
 
 // GetValue returns the value of well-known types
 func (o *UrlmanagerCreateUrlRewriteRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+	if o == nil || IsNil(o.AdditionalProperties) {
 		return nil
 	}
 	return o.AdditionalProperties["value"]
 }
-// SetValue populate the value of well-known types
+
+// SetValue populates the value of well-known types
 func (o *UrlmanagerCreateUrlRewriteRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
+	if o == nil || IsNil(value) {
 		return
 	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
-    }
+	if IsNil(o.AdditionalProperties) {
+		o.AdditionalProperties = map[string]interface{}{}
+	}
 	o.AdditionalProperties["value"] = value
 	return
 }
+
 type NullableUrlmanagerCreateUrlRewriteRequest struct {
 	value *UrlmanagerCreateUrlRewriteRequest
 	isSet bool
@@ -367,5 +369,3 @@ func (v *NullableUrlmanagerCreateUrlRewriteRequest) UnmarshalJSON(src []byte) er
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

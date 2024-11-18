@@ -21,8 +21,8 @@ type UrlRewriteLinkRel string
 
 // List of UrlRewriteLinkRel
 const (
-	URLREWRITELINKREL_UNKNOWN UrlRewriteLinkRel = "LinkRel_UNKNOWN"
-	URLREWRITELINKREL_NONE UrlRewriteLinkRel = "LinkRel_NONE"
+	URLREWRITELINKREL_UNKNOWN   UrlRewriteLinkRel = "LinkRel_UNKNOWN"
+	URLREWRITELINKREL_NONE      UrlRewriteLinkRel = "LinkRel_NONE"
 	URLREWRITELINKREL_CANONICAL UrlRewriteLinkRel = "LinkRel_CANONICAL"
 	URLREWRITELINKREL_ALTERNATE UrlRewriteLinkRel = "LinkRel_ALTERNATE"
 )
@@ -113,4 +113,3 @@ func (v *NullableUrlRewriteLinkRel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

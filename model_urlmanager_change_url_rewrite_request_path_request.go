@@ -27,7 +27,7 @@ type UrlmanagerChangeUrlRewriteRequestPathRequest struct {
 	// Required.
 	RequestPath *string `json:"requestPath,omitempty"`
 	// Required.
-	RequestPathNew *string `json:"requestPathNew,omitempty"`
+	RequestPathNew       *string `json:"requestPathNew,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -179,7 +179,7 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) SetRequestPathNew(v strin
 }
 
 func (o UrlmanagerChangeUrlRewriteRequestPathRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -234,22 +234,24 @@ func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) UnmarshalJSON(data []byte
 
 // GetValue returns the value of well-known types
 func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+	if o == nil || IsNil(o.AdditionalProperties) {
 		return nil
 	}
 	return o.AdditionalProperties["value"]
 }
-// SetValue populate the value of well-known types
+
+// SetValue populates the value of well-known types
 func (o *UrlmanagerChangeUrlRewriteRequestPathRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
+	if o == nil || IsNil(value) {
 		return
 	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
-    }
+	if IsNil(o.AdditionalProperties) {
+		o.AdditionalProperties = map[string]interface{}{}
+	}
 	o.AdditionalProperties["value"] = value
 	return
 }
+
 type NullableUrlmanagerChangeUrlRewriteRequestPathRequest struct {
 	value *UrlmanagerChangeUrlRewriteRequestPathRequest
 	isSet bool
@@ -285,5 +287,3 @@ func (v *NullableUrlmanagerChangeUrlRewriteRequestPathRequest) UnmarshalJSON(src
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

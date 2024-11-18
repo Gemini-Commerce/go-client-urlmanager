@@ -21,12 +21,12 @@ var _ MappedNullable = &UrlmanagerListUrlRewritesRequest{}
 // UrlmanagerListUrlRewritesRequest struct for UrlmanagerListUrlRewritesRequest
 type UrlmanagerListUrlRewritesRequest struct {
 	// Required.
-	TenantId *string `json:"tenantId,omitempty"`
-	Filter *ListUrlRewritesRequestFilter `json:"filter,omitempty"`
+	TenantId *string                       `json:"tenantId,omitempty"`
+	Filter   *ListUrlRewritesRequestFilter `json:"filter,omitempty"`
 	// The maximum number of url rewrites to return. The service may return fewer than this value. If unspecified, at most 10 url rewrites will be returned. The maximum value is 200; values above 200 will be coerced to 200.
 	PageSize *int64 `json:"pageSize,omitempty"`
 	// A page token, received from a previous `ListUrlRewrites` call. Provide this to retrieve the subsequent page.   When paginating, all other parameters provided to `ListUrlRewrites` must match the call that provided the page token.
-	PageToken *string `json:"pageToken,omitempty"`
+	PageToken            *string `json:"pageToken,omitempty"`
 	AdditionalProperties map[string]interface{}
 }
 
@@ -178,7 +178,7 @@ func (o *UrlmanagerListUrlRewritesRequest) SetPageToken(v string) {
 }
 
 func (o UrlmanagerListUrlRewritesRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -233,22 +233,24 @@ func (o *UrlmanagerListUrlRewritesRequest) UnmarshalJSON(data []byte) (err error
 
 // GetValue returns the value of well-known types
 func (o *UrlmanagerListUrlRewritesRequest) GetValue() interface{} {
-	if o == nil || IsNil(o.Type) || IsNil(o.AdditionalProperties) {
+	if o == nil || IsNil(o.AdditionalProperties) {
 		return nil
 	}
 	return o.AdditionalProperties["value"]
 }
-// SetValue populate the value of well-known types
+
+// SetValue populates the value of well-known types
 func (o *UrlmanagerListUrlRewritesRequest) SetValue(value interface{}) {
-	if o == nil || IsNil(o.Type) || IsNil(value) {
+	if o == nil || IsNil(value) {
 		return
 	}
-    if IsNil(o.AdditionalProperties) {
-        o.AdditionalProperties = map[string]interface{}{}
-    }
+	if IsNil(o.AdditionalProperties) {
+		o.AdditionalProperties = map[string]interface{}{}
+	}
 	o.AdditionalProperties["value"] = value
 	return
 }
+
 type NullableUrlmanagerListUrlRewritesRequest struct {
 	value *UrlmanagerListUrlRewritesRequest
 	isSet bool
@@ -284,5 +286,3 @@ func (v *NullableUrlmanagerListUrlRewritesRequest) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-
